@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>崔亮的博客</title>
-    <link rel="stylesheet" href="../new-myblog/static/layui/css/layui.css"  media="all">
-    <link rel="stylesheet" href="../new-myblog/static/css/blog.css"  media="all">
+    <link rel="stylesheet" href="static/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="static/css/blog.css"  media="all">
 </head>
 <body>
 <ul class="layui-nav" id="nav-ul">
@@ -31,10 +31,12 @@
     <li class="layui-nav-item">
         <a href="">关于博主</a>
     </li>
-    <div class="layui-nav-item nav-search container">
-        <input type="text" placeholder="请输入关键字">
-        <div class="search"></div>
-    </div>
+    <li class="layui-nav-item">
+        <span class="nav-search container">
+            <input type="text" placeholder="请输入关键字">
+            <div class="search"></div>
+        </span>
+    </li>
     <li class="layui-nav-item nav-rignt">
         <a href="">注册</a>
     </li>
@@ -47,8 +49,12 @@
         </dl>
     </li>
 </ul>
-<script src="../new-myblog/static/layui/layui.all.js" charset="utf-8"></script>
-<script src="../new-myblog/static/jquery/jquery-3.5.1.js" charset="utf-8"></script>
+<div class="nav-search container">
+    <input type="text" placeholder="请输入关键字">
+    <div class="search"></div>
+</div>
+<script src="static/layui/layui.all.js" charset="utf-8"></script>
+<script src="static/jquery/jquery-3.5.1.js" charset="utf-8"></script>
 <script>
     layui.use('element', function(){
         var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块

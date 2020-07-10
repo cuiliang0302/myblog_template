@@ -21,8 +21,10 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 80px;
-    height: 80px;
+    width: 80%;
+    height: 80%;
+    /*width: 60%;*/
+    /*height: 60%;*/
     background: #393d49;
     border-radius: 50%;
     transition: all 1s;
