@@ -136,10 +136,17 @@
     padding-left: 20px;
     /*padding-right: 20px;*/
 }
+/*导航栏鼠标悬停下拉*/
 .dropdown:hover>.dropdown-menu {
     display: block;
 }
 .dropdown>.dropdown-toggle:active {
     pointer-events: none;
 }
-
+/*主页栏目标题*/
+aside h3 {
+    background: #f8f8f8;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+}
