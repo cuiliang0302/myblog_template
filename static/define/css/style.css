@@ -23,8 +23,12 @@ body {
     background: #f1f1f1;
 }
 a  {
-    text-decoration: none;
+    text-decoration:none;
 }
+a:hover {
+    font-weight: bold;
+}
+
 /*搜索栏*/
 .container {
     position: absolute;
@@ -159,23 +163,24 @@ h4 {
     position: relative;
     color: #1E9FFF;
 }
+/*卡片悬浮特效*/
+.suspend{
+    -webkit-transition: all 2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    word-break: break-all;
+}
+.suspend:hover {
+    box-shadow: 0px 1rem 1rem 0px rgba(48, 55, 66, 0.15);
+    transform: translate(0, -5px);
+    transition-delay: 0s !important;
+}
 /*主页侧边栏*/
 .post-right-item {
     padding: 15px 20px 15px 20px;
     background-color: #FFF;
     box-shadow: 0 1px 4px rgba(0,0,0,.1);
     margin-bottom: 20px;
-    -webkit-transition: all 2s cubic-bezier(0.02, 0.01, 0.47, 1);
-    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
-    word-break: break-all;
 }
-/*主页侧边栏悬停效果*/
-.post-right-item:hover{
-    box-shadow: 0px 1rem 1rem 0px rgba(48, 55, 66, 0.15);
-    transform: translate(0,-5px);
-    transition-delay: 0s !important;
-}
-/*热门文章*/
 .hot-list {
     padding-left: 20px;
     color: #d9534f;
@@ -339,4 +344,12 @@ time i {
     font-size: 14px;
     padding-left: 8px;
     padding-right: 8px;
+}
+/*分页菜单*/
+#page {
+    text-align: center;
+}
+.nav-fixed {
+    position: fixed;
+    width: 100%;
 }
