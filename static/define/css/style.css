@@ -157,7 +157,7 @@ h4 {
 }
 /*主页侧边栏*/
 .post-right-item {
-    padding: 15px 20px 0 20px;
+    padding: 15px 20px 15px 20px;
     background-color: #FFF;
     box-shadow: 0 1px 4px rgba(0,0,0,.1);
     margin-bottom: 20px;
@@ -177,6 +177,7 @@ h4 {
     color: #d9534f;
     font-family: "Georgia";
     font-size: 16px;
+    margin-bottom: 0px;
 }
 /*热门文章标题名称列表*/
 .hot-list li a {
@@ -252,34 +253,76 @@ img{
 div img:hover{
     transform: scale(1.1);
 }
+/*文章标签*/
+.label-tag a{
+    text-decoration: none;
+    margin-left: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    font-weight: normal;
+    padding: 3px 3px 3px 3px;
+    border-radius: 5px;
+}
 /*各个不同颜色标签*/
 .label-color-1 a{
     /*text-decoration: none;*/
     background-color: red;
-    color: #fff;
-    font-weight: normal;
-    padding: 5px 5px 5px 5px;
-    border-radius: 5px;
 }
 .label-color-2 a{
     /*text-decoration: none;*/
-    background-color: yellow;
-    color: #fff;
-    font-weight: normal;
-    padding: 5px 5px 5px 5px;
-    border-radius: 5px;
+    background-color: pink;
 }
 .label-color-3 a{
     /*text-decoration: none;*/
-    background-color: blue;
-    color: #fff;
-    font-weight: normal;
-    padding: 5px 5px 5px 5px;
-    border-radius: 5px;
+    background-color: green;
+}
+.label-color-4 a{
+    /*text-decoration: none;*/
+    background-color: dodgerblue;
+}
+.label-color-5 a{
+    /*text-decoration: none;*/
+    background-color: rebeccapurple;
+}
+.label-color-6 a{
+    /*text-decoration: none;*/
+    background-color: violet;
+}
+.label-color-7 a{
+    /*text-decoration: none;*/
+    background-color: skyblue;
+}
+.label-color-8 a{
+    /*text-decoration: none;*/
+    background-color: midnightblue;
 }
 /*主页最新文章创建时间*/
 time i {
     padding-left: 20px;
     font-size: 14px;
     color: #999;
+}
+/*侧边标签栏*/
+.tags {
+    margin-left: -8px;
+    margin-top: -8px;
+}
+/*侧边关于博主*/
+.about-me {
+    margin-left: 0;
+    margin-top: 0;
+}
+/*关于博主文字*/
+.about-me span {
+    font-size: 16px;
+    padding-left: 10px;
+    color: #4e555b;
+    line-height: 2em;
+}
+/*关于博主其他logo*/
+.about-logo span {
+    padding-right: 15px;
+    color: black;
 }
