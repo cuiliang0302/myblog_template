@@ -9,7 +9,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+#index-main{
+    margin-top: 80px;
+    margin-left: 0;
+    margin-right: 0
+}
 /*html, body {*/
 /*    width: 100%;*/
 /*    height: 100%;*/
@@ -325,4 +329,14 @@ time i {
 .about-logo span {
     padding-right: 15px;
     color: black;
+}
+/*底部版权信息*/
+#footer a {
+    font-size: 14px;
+    color: white;
+}
+#footer span {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
