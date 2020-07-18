@@ -60,6 +60,10 @@ select {
   background-color: transparent;
   cursor: pointer;
 }
+.nav-fixed {
+  position: fixed;
+  width: 100%;
+}
 
 .cd-select::after {
   /* switcher arrow for select element */
@@ -98,7 +102,6 @@ Header
 
 -------------------------------- */
 .cd-main-header {
-  position: relative;
   z-index: 4;
   height: 50px;
   background-color: #333545;
@@ -270,13 +273,12 @@ Header
 }
 
 .cd-main-nav {
-  padding-top: 15px;
-  margin-top: 0;
+  margin-top: 20px;
   position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   background: #1f2029;
   visibility: hidden;
