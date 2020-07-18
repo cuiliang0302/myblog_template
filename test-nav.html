@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="static/nav/nav.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="static/layui/css/layui.css"> <!-- Resource style -->
 </head>
 <body>
 <header class="nav-fixed cd-main-header animate-search">
-    <div class="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
-
+    <div class="cd-logo"><a href="#"><img src="static/images/logo.png" alt="Logo"></a></div>
     <nav class="cd-main-nav-wrapper">
-        <a href="#search" class="cd-search-trigger cd-text-replace">Search</a>
-
+        <a href="#search" class="cd-search-trigger cd-text-replace">
+            <i class="layui-icon layui-icon-search" style="font-size: 30px; color:white;"></i>
+        </a>
         <ul class="cd-main-nav">
             <li><a href="#0">Products</a></li>
             <li><a href="#0">Store</a></li>
@@ -22,7 +23,7 @@
         </ul> <!-- .cd-main-nav -->
     </nav> <!-- .cd-main-nav-wrapper -->
 
-    <a href="#0" class="cd-nav-trigger cd-text-replace">Menu<span></span></a>
+    <a href="#0" class="cd-nav-trigger cd-text-replace"><span></span></a>
 </header>
 
 <main class="cd-main-content">
@@ -84,7 +85,7 @@
         </div> <!-- .quick-links -->
     </div> <!-- .cd-search-suggestions -->
 
-    <a href="#0" class="close cd-text-replace">Close Form</a>
+    <a href="#0" class="close cd-text-replace"></a>
 </div> <!-- .cd-main-search -->
 <div class="cd-cover-layer"></div> <!-- cover main content when search form is open -->
 

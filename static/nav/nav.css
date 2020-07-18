@@ -91,7 +91,7 @@ Patterns - reusable parts of our design
 .cd-text-replace {
   /* replace text with image */
   color: transparent;
-  text-indent: 100%;
+  /*text-indent: 100%;*/
   overflow: hidden;
   white-space: nowrap;
 }
@@ -153,7 +153,10 @@ Header
 }
 
 .cd-logo {
-  display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /*display: inline-block;*/
   height: 100%;
   margin-left: 15px;
   /* remove jump on iOS devices - when we fire the navigation */
@@ -166,18 +169,22 @@ Header
   backface-visibility: hidden;
 }
 .cd-logo img {
+   /*padding-top: 3em;*/
   display: block;
-  margin-top: 14px;
+    width: 75%;
 }
 @media only screen and (min-width: 1024px) {
   .cd-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     position: absolute;
     z-index: 3;
     margin-left: 5%;
   }
-  .cd-logo img {
-    margin-top: 29px;
-  }
+  /*.cd-logo img {*/
+  /*  margin-top: 29px;*/
+  /*}*/
 }
 
 .cd-nav-trigger {
@@ -731,6 +738,7 @@ Search Form
 }
 @media only screen and (min-width: 1024px) {
   .cd-search-trigger {
+      padding-top: 20px;
     display: block;
     position: relative;
     z-index: 3;
@@ -773,14 +781,12 @@ Search Form
     transform: translateX(-50%) translateY(-50%) scale(0);
     height: 100%;
     width: 100%;
-    background-color: #dd85ac;
     border-radius: 50%;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
   .no-touch .cd-search-trigger:hover::before {
-    background-color: #df8bb0;
   }
   .cd-search-trigger.search-form-visible {
     -webkit-transform: translateX(-46px);
@@ -858,7 +864,6 @@ Page main content
   margin-bottom: .6em;
 }
 .cd-main-content .cd-download-btn {
-  background: #dd85ac;
   color: #ffffff;
   display: inline-block;
   padding: 1.4em 1.6em;
