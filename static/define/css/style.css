@@ -8,11 +8,7 @@
     width: 120px;
     margin-top: 10px;
 }
-/*手机版导航栏logo*/
-#mobile-nav img{
-    width: 100px;
-    margin-top: 10px;
-}
+
 /*导航栏图标*/
 .nav-icon i {
     font-size: 30px;

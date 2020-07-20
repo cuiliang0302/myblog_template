@@ -123,6 +123,7 @@
         $(window).scroll(function(e){
             p=$(this).scrollTop();
             if(t<=p){
+                console.log(p)
                 $('.nav-fixed').slideUp();
             }
             else{

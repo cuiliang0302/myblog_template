@@ -8,51 +8,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="static/layui/css/layui.css"  media="all">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <style>
+        #vivo-head .vivo-search{height:80px;width:100%;background:#202223;position:relative;z-index:9999;display:none;
+        .vivo-search .search-box{width:700px;height:40px;position:absolute;top:20px;left:50%;margin-left:-350px;background:#666;-webkit-box-shadow:0 1px 2px rgb(0,0,0);-moz-box-shadow:0 1px 2px rgb(0,0,0);-ms-box-shadow:0 1px 2px rgb(0,0,0);box-shadow:0 1px 2px rgb(0,0,0);position:relative;z-index:9999;}
+        .vivo-search .search-box input{width:550px;height:20px;padding:10px 20px;font-size:14px;color:#555;border:none;background:#fff;overflow:hidden;vertical-align:middle;}
+        .vivo-search .search-box button{width:110px;height:40px;overflow:hidden;text-align:center;font-size:14px;color:#fff;border:none;overflow:hidden;vertical-align:middle;background:#008cd6;outline:none;cursor:pointer;-webkit-transition:background .2s ease-in-out;-moz-transition:background .2s ease-in-out;-ms-transition:background .2s ease-in-out;transition:background .2s ease-in-out;}
+        .vivo-search .search-box button:hover{background:#0074b2;}
+        .vivo-search .search-box button:active{-webkit-box-shadow:0 1px 2px rgba(0,0,0,.3) inset;-moz-box-shadow:0 1px 2px rgba(0,0,0,.3) inset;-ms-box-shadow:0 1px 2px rgba(0,0,0,.3) inset;box-shadow:0 1px 2px rgba(0,0,0,.3) inset;}
+        .vivo-search .search-box a.close{width:24px;height:24px;position:absolute;top:8px;right:-40px;background:url(../images/vivo-head-ico.png) -86px 0 no-repeat;_background-image:url(../images/vivo-head-ico.gif);}
+        .vivo-search .search-box a.close:hover{background-position:-86px -25px;}
+    </style>
 </head>
 <body>
-    <a href="#" id="search" ><i data-method="notice" class="layui-icon layui-icon-friends"></i></a>
-
-<i class="layui-icon layui-icon-search"></i>
-
-<script src="static/layui/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<ul class="layui-nav">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item layui-this">
+        <a href="javascript:;">产品</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">选项1</a></dd>
+            <dd><a href="">选项2</a></dd>
+            <dd><a href="">选项3</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模版</a></dd>
+            <dd class="layui-this"><a href="">选中项</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item"><a href="">社区</a></li>
+    <li class="layui-nav-item layui-hide-xs">
+        <a href="#"><i class="layui-icon layui-icon-search"></i></a>
+    </li>
+    <div class="vivo-search">
+        <div class="search-box">
+            <form action='http://www.17sucai.com' method='get'>
+                <input type="text" placeholder="如:jquery插件" name='q' class='data_q' autocomplete="off"><button>搜索</button><a class="close"></a>
+            </form>
+        </div>
+    </div>
+</ul>
 <script>
-    layui.use('layer', function(){ //独立版的layer无需执行这一句
-        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+    search = {
+        init : function(){
+            var headBox=$("#vivo-head"),
+                navBox=headBox.find(".vivo-nav"),
+                searchBox=headBox.find(".vivo-search"),
+                searchInput=searchBox.find("input"),
+                searchBtn=navBox.find(".search-user a.search"),
+                closeSearchBtn=searchBox.find("a.close"),
+                isSearchClose=true,
+                isMenuEnter=isCommEnter=false;
 
-        //触发事件
-        var active = {
-            notice: function(){
-                //示范一个公告层
-                layer.open({
-                    type: 1
-                    ,title: false //不显示标题栏
-                    ,closeBtn: false
-                    ,area: '300px;'
-                    ,shade: 0.8
-                    ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
-                    ,btn: ['火速围观', '残忍拒绝']
-                    ,btnAlign: 'c'
-                    ,moveType: 1 //拖拽模式，0或者1
-                    ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
-                    ,success: function(layero){
-                        var btn = layero.find('.layui-layer-btn');
-                        btn.find('.layui-layer-btn0').attr({
-                            href: 'http://www.layui.com/'
-                            ,target: '_blank'
-                        });
-                    }
-                });
-            }
-        };
+            closeSearchBtn.css({opacity:0});
+            searchBox.on({
+                mouseenter : function(){
+                    closeSearchBtn.animate({opacity:1},300);
+                },
+                mouseleave : function(){
+                    closeSearchBtn.animate({opacity:0},300);
+                }
+            });
 
-        $('#search .layui-icon').on('click', function(){
-            var othis = $(this), method = othis.data('method');
-            active[method] ? active[method].call(this, othis) : '';
-        });
+            searchBtn.on("click",function(){
+                if(isSearchClose){
+                    searchBox.children().css({opacity:0});
+                    searchBox.css({display:"block",height:0}).stop().animate({height:80},300);
+                    searchBox.children().stop().delay(300).animate({opacity:1},500);
+                    searchInput.focus().val("");
+                    $(this).addClass("current");
+                    isSearchClose=false;
+                }else{
+                    searchBox.stop().animate({height:0},300,function(){
+                        $(this).css({display:"none"});
+                        isSearchClose=true;
+                    });
+                    $(this).removeClass("current");
+                }
+                return false;
+            });
+            closeSearchBtn.on("click",function(){
+                searchBtn.click();
+                return false;
+            });
 
-    });
+        }
+    };
+
+    $(document).ready(function() {search.init()});
 </script>
-
 </body>
 </html>
