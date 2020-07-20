@@ -144,7 +144,7 @@ Header
 }
 
 .cd-main-nav-wrapper {
-  padding: 0 5%;
+  padding: 4em 5%;
 }
 .cd-main-nav-wrapper::after {
   clear: both;
@@ -280,7 +280,7 @@ Header
 }
 
 .cd-main-nav {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   position: fixed;
   z-index: 1;
   top: 0;
@@ -325,12 +325,12 @@ Header
 @media only screen and (min-width: 1024px) {
   .cd-main-nav {
     /* reset style */
+    padding-left: 15%;
     position: static;
     visibility: visible;
     width: auto;
     background: transparent;
     overflow: visible;
-    float: right;
   }
   .cd-main-nav li {
     display: inline-block;
@@ -492,7 +492,7 @@ Search Form
     /* 'X' icon - used to close the search form */
     display: inline-block;
     position: absolute;
-    right: 5%;
+    right: 8%;
     top: 50%;
     height: 40px;
     width: 40px;
@@ -738,14 +738,11 @@ Search Form
 }
 @media only screen and (min-width: 1024px) {
   .cd-search-trigger {
-      padding-top: 20px;
-    display: block;
+    display: inline-block;
     position: relative;
     z-index: 3;
     height: 40px;
     width: 40px;
-    margin: 1.25em .5em;
-    float: right;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
@@ -986,4 +983,13 @@ JavaScript Disabled
 }
 .no-js .cd-main-search .selected-value {
   display: none;
+}
+.nav-user {
+  float: right;
+}
+.nav-right-icon {
+  float: right;
+  width: 100px;
+  display: inline-block;
+  margin: 1.25em .5em;
 }

@@ -12,14 +12,21 @@
 <header class="nav-fixed cd-main-header animate-search">
     <div class="cd-logo"><a href="#"><img src="static/images/logo.png" alt="Logo"></a></div>
     <nav class="cd-main-nav-wrapper">
-        <a href="#search" class="cd-search-trigger cd-text-replace">
-            <i class="layui-icon layui-icon-search" style="font-size: 30px; color:white;"></i>
-        </a>
+        <span class="nav-right-icon">
+            <a href="#search" class="cd-search-trigger cd-text-replace">
+                <i class="layui-icon layui-icon-search" style="font-size: 30px; color:white;"></i>
+            </a>
+            <a href="#" id="#user" class="nav-user">
+                <i class="layui-icon layui-icon-friends" style="font-size: 30px; color:white;"></i>
+            </a>
+        </span>
         <ul class="cd-main-nav">
-            <li><a href="#0">Products</a></li>
-            <li><a href="#0">Store</a></li>
-            <li><a href="#0">Blog</a></li>
-            <li><a href="#0">Contact</a></li>
+            <li><a href="#0">首页</a></li>
+            <li><a href="#0">文章分类</a></li>
+            <li><a href="#0">电子书</a></li>
+            <li><a href="#0">时间轴</a></li>
+            <li><a href="#0">留言板</a></li>
+            <li><a href="#0">关于博主</a></li>
         </ul> <!-- .cd-main-nav -->
     </nav> <!-- .cd-main-nav-wrapper -->
 
@@ -98,11 +105,9 @@
         $(window).scroll(function(e){
             p=$(this).scrollTop();
             if(t<=p){
-
                 $('.nav-fixed').slideUp();
             }
             else{
-                // console.log('上滚');
                 $('.nav-fixed').slideDown();
             }
             t = p;
