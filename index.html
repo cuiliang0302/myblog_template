@@ -1,127 +1,233 @@
 <!DOCTYPE html>
-<html lang="zh" class="no-js">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="static/nav/nav.css"> <!-- Resource style -->
-    <link rel="stylesheet" href="static/layui/css/layui.css"> <!-- Resource style -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="static/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="static/define/css/style.css"  media="all">
 </head>
 <body>
-<header class="nav-fixed cd-main-header animate-search">
-    <div class="cd-logo"><a href="#"><img src="static/images/logo.png" alt="Logo"></a></div>
-    <nav class="cd-main-nav-wrapper">
-        <span class="nav-right-icon">
-            <a href="#search" class="cd-search-trigger cd-text-replace">
-                <i class="layui-icon layui-icon-search" style="font-size: 30px; color:white;"></i>
-            </a>
-            <a href="#" id="#user" class="nav-user">
-                <i class="layui-icon layui-icon-friends" style="font-size: 30px; color:white;"></i>
-            </a>
-        </span>
-        <ul class="cd-main-nav">
-            <li><a href="#0">首页</a></li>
-            <li class="nav-father"><a href="#0">文章分类<i class="layui-icon layui-icon-triangle-d"></i></a>
-                <dl class="nav-son">
-                    <dd><a href="#">Linux</a></dd>
-                    <dd><a href="#">MySQL</a></dd>
-                    <dd><a href="#">kubernets</a></dd>
-                    <dd><a href="#">选项4</a></dd>
-                    <dd><a href="#">选项5</a></dd>
-                    <dd><a href="#">选项6</a></dd>
-                </dl>
-            </li>
-            <li><a href="#0">电子书<i class="layui-icon layui-icon-triangle-d"></i></a></li>
-            <li><a href="#0">时间轴</a></li>
-            <li><a href="#0">留言板</a></li>
-            <li><a href="#0">关于博主</a></li>
-        </ul> <!-- .cd-main-nav -->
-    </nav> <!-- .cd-main-nav-wrapper -->
-
-    <a href="#0" class="cd-nav-trigger cd-text-replace"><span></span></a>
-</header>
-
-<main class="cd-main-content">
-<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
-    <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
-    <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
-    <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
-</main>
-
-<div id="search" class="cd-main-search">
-    <form>
-        <input type="search" placeholder="Search...">
-
-        <div class="cd-select">
-            <span>in</span>
-            <select name="select-category">
-                <option value="all-categories" class="select-category-option">all Categories</option>
-                <option value="category1" class="select-category-option">Category 1</option>
-                <option value="category2" class="select-category-option">Category 2</option>
-                <option value="category3" class="select-category-option">Category 3</option>
-            </select>
-            <span class="selected-value">all Categories</span>
-        </div>
-    </form>
-
-    <div class="cd-search-suggestions">
-        <div class="news">
-            <h3>News</h3>
-            <ul>
-                <li>
-                    <a class="image-wrapper" href="#0"><img src="img/placeholder.png" alt="News image"></a>
-                    <h4><a class="cd-nowrap" href="#0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
-                    <time datetime="2016-01-12">Feb 03, 2016</time>
-                </li>
-
-                <li>
-                    <a class="image-wrapper" href="#0"><img src="img/placeholder.png" alt="News image"></a>
-                    <h4><a class="cd-nowrap" href="#0">Incidunt voluptatem adipisci voluptates fugit beatae culpa eum, distinctio, assumenda est ad</a></h4>
-                    <time datetime="2016-01-12">Jan 28, 2016</time>
-                </li>
-
-                <li>
-                    <a class="image-wrapper" href="#0"><img src="img/placeholder.png" alt="News image"></a>
-                    <h4><a class="cd-nowrap" href="#0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, esse.</a></h4>
-                    <time datetime="2016-01-12">Jan 12, 2016</time>
-                </li>
-            </ul>
-        </div> <!-- .news -->
-
-        <div class="quick-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#0">Find a store</a></li>
-                <li><a href="#0">Accessories</a></li>
-                <li><a href="#0">Warranty info</a></li>
-                <li><a href="#0">Support</a></li>
-                <li><a href="#0">Contact us</a></li>
-            </ul>
-        </div> <!-- .quick-links -->
-    </div> <!-- .cd-search-suggestions -->
-
-    <a href="#0" class="close cd-text-replace"></a>
-</div> <!-- .cd-main-search -->
-<div class="cd-cover-layer"></div> <!-- cover main content when search form is open -->
-
-
-<script src="static/jquery-3.5.1/jquery-3.5.1.min.js" type="text/javascript"></script>
-<script src="static/nav/nav.js"></script> <!-- Resource jQuery -->
+<!--电脑版导航栏-->
+<nav>
+<ul class="layui-nav" id="desktop-nav">
+    <a class="nav-logo" href="#"><img src="static/images/logo.png"></a>
+    <li class="layui-nav-item"><a href="">首页</a></li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">文章分类</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">MySQL</a></dd>
+            <dd><a href="">Linux</a></dd>
+            <dd><a href="">kubernets</a></dd>
+            <dd><a href="">MySQL</a></dd>
+            <dd><a href="">Linux</a></dd>
+            <dd><a href="">kubernets</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">电子书</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">MySQL</a></dd>
+            <dd><a href="">Linux</a></dd>
+            <dd class="layui-this"><a href="">python</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item layui-hide-xs"><a href="">时间轴</a></li>
+    <li class="layui-nav-item layui-hide-xs"><a href="">留言板</a></li>
+    <li class="layui-nav-item layui-hide-xs"><a href="">关于博主</a></li>
+    <span class="nav-icon">
+        <li class="layui-nav-item layui-hide-xs">
+            <a href="#" id="nav-search" ><i data-method="search" class="layui-icon layui-icon-search"></i></a>
+        <li class="layui-nav-item layui-hide-xs">
+            <a href="#" id="nav-user" ><i data-method="user" class="layui-icon layui-icon-friends"></i></a>
+    </span>
+</ul>
+</nav>
+<!--手机版导航栏-->
+<nav>
+<ul class="layui-nav" id="mobile-nav">
+    <a class="nav-logo" href="#"><img src="static/images/logo.png"></a>
+    <li class="layui-nav-item"><a href="">首页</a></li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">文章分类</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">MySQL</a></dd>
+            <dd><a href="">Linux</a></dd>
+            <dd><a href="">kubernets</a></dd>
+            <dd><a href="">MySQL</a></dd>
+            <dd><a href="">Linux</a></dd>
+            <dd><a href="">kubernets</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">电子书</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">MySQL</a></dd>
+            <dd><a href="">Linux</a></dd>
+            <dd class="layui-this"><a href="">python</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">更多</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">时间轴</a></dd>
+            <dd><a href="">留言板</a></dd>
+            <dd><a href="">关于博主</a></dd>
+            <dd><a href="">登录</a></dd>
+            <dd class="layui-this"><a href="">搜索</a></dd>
+        </dl>
+    </li>
+</ul>
+</nav>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<script src="static/layui/layui.js" charset="utf-8"></script>
+<script src="static/jquery-3.5.1/jquery-3.5.1.min.js" charset="utf-8"></script>
 <script>
+    layui.use('element', function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //监听导航点击
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+</script>
+<script>
+    // 根据设备类型，显示不同nav
+    if (screen.width <= 768) {
+        // console.log("是手机")
+        document.getElementById("desktop-nav").style.display="none";
+    }
+    else {
+        // console.log("是电脑")
+        document.getElementById("mobile-nav").style.display="none";
+    }
+</script>
+<script>
+    // 导航栏吸顶效果
     $(document).ready(function(){
         var p=0; t=0;
         $(window).scroll(function(e){
             p=$(this).scrollTop();
             if(t<=p){
-                $('.nav-fixed').slideUp();
+                // $('.nav-fixed').slideUp();
+                // console.log("下翻");
+                if (screen.width <= 768) {
+                    // console.log("是手机")
+                    document.getElementById("desktop-nav").style.display="none";
+                    $('.nav-fixed').slideUp();
+                }
+                else {
+                    // console.log("是电脑")
+                    document.getElementById("mobile-nav").style.display="none";
+                    $('.nav-fixed').slideUp();
+                }
             }
             else{
-                $('.nav-fixed').slideDown();
+                // $('.nav-fixed').slideDown();
+                // console.log("上翻");
+                if (screen.width <= 768) {
+                    // console.log("是手机")
+                    document.getElementById("desktop-nav").style.display="none";
+                    $('.nav-fixed').slideDown();
+                }
+                else {
+                    // console.log("是电脑")
+                    document.getElementById("mobile-nav").style.display="none";
+                    $('.nav-fixed').slideDown();
+                }
             }
             t = p;
         })
     })
+</script>
+<script>
+    // 导航栏当前标签页
+    $(document).ready(function(){
+        var desktop_ul = document.getElementById("desktop-nav").children[1];
+        desktop_ul.className = 'layui-nav-item layui-this';
+        var mobile_ul = document.getElementById("mobile-nav").children[1];
+        mobile_ul.className = 'layui-nav-item layui-this'
+    })
+</script>
+<script>
+    // 导航栏用户登录
+    layui.use('layer', function(){ //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            user: function(){
+                //示范一个公告层
+                layer.open({
+                    type: 1
+                    ,title: false //不显示标题栏
+                    ,closeBtn: false
+                    ,area: '300px;'
+                    ,shade: 0.8
+                    ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                    ,btn: ['火速围观', '残忍拒绝']
+                    ,btnAlign: 'c'
+                    ,moveType: 1 //拖拽模式，0或者1
+                    ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
+                    ,success: function(layero){
+                        var btn = layero.find('.layui-layer-btn');
+                        btn.find('.layui-layer-btn0').attr({
+                            href: 'http://www.layui.com/'
+                            ,target: '_blank'
+                        });
+                    }
+                });
+            }
+        };
+        $('#nav-user .layui-icon').on('click', function(){
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+</script>
+<script>
+    // 导航栏用户登录
+    layui.use('layer', function(){ //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            search: function(){
+                //示范一个公告层
+                layer.open({
+                    type: 1
+                    ,title: false //不显示标题栏
+                    ,closeBtn: false
+                    ,area: '300px;'
+                    ,shade: 0.8
+                    ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                    ,btn: ['火速围观', '残忍拒绝']
+                    ,btnAlign: 'c'
+                    ,moveType: 1 //拖拽模式，0或者1
+                    ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
+                    ,success: function(layero){
+                        var btn = layero.find('.layui-layer-btn');
+                        btn.find('.layui-layer-btn0').attr({
+                            href: 'http://www.layui.com/'
+                            ,target: '_blank'
+                        });
+                    }
+                });
+            }
+        };
+        $('#nav-search .layui-icon').on('click', function(){
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
 </script>
 </body>
 </html>
