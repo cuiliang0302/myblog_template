@@ -9,9 +9,12 @@
     margin-top: 10px;
 }
 /*电脑版导航栏logo*/
-#mobile-nav img{
-    width: 80px;
-    margin-top: 10px;
+#mobile-nav {
+    padding: 0;
+}
+#mobile-nav a{
+    display: inline;
+    padding-left: 0;
 }
 /*导航栏图标*/
 .nav-icon i {
