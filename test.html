@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>手机侧边导航栏</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -37,27 +37,34 @@
         .side-show {
             margin-left: 0;
         }
+        .layui-logo {
+            height: 70px;
+        }
     </style>
 </head>
 <body>
 <!--手机版顶部导航栏-->
-<div class="mobile-nav-header">
+<div class="mobile-nav-header" id="mobile-nav">
     <nav>
-        <ul class="layui-nav" id="mobile-nav">
+        <ul class="layui-nav">
             <li class="layui-nav-item">
                 <a class="broadside-btn"><i></i></a>
             </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">文章分类</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">MySQL</a></dd>
-                    <dd><a href="">Linux</a></dd>
-                    <dd><a href="">kubernets</a></dd>
-                    <dd><a href="">MySQL</a></dd>
-                    <dd><a href="">Linux</a></dd>
-                    <dd><a href="">kubernets</a></dd>
-                </dl>
-            </li>
+            <span class="nav-icon">
+                <li>
+                    <a href="#" id="nav-search"><i data-method="search" class="layui-icon layui-icon-search"></i></a>
+                    <!--        用户未登录-->
+                <li>
+                    <a href="#" id="nav-user"><i data-method="user" class="layui-icon layui-icon-friends"></i></a>
+            <!--        用户已登录-->
+                <!--        <li class="layui-nav-item">-->
+                <!--        <a href="javascript:;">admin</a>-->
+                <!--        <dl class="layui-nav-child">-->
+                <!--            <dd><a href="">个人中心</a></dd>-->
+                <!--            <dd><a href="">退出登录</a></dd>-->
+                <!--        </dl>-->
+                </li>
+            </span>
 <!--            <li class="layui-nav-item">-->
 <!--                <a href="javascript:;">电子书</a>-->
 <!--                <dl class="layui-nav-child">-->
@@ -501,6 +508,7 @@
     // 根据设备类型，显示不同nav
     if (screen.width <= 768) {
         console.log("是手机")
+
         document.getElementById("desktop-nav").style.display = "none";
         document.getElementById("mobile-nav").classList.add("nav-fixed");
     } else {
@@ -544,15 +552,15 @@
         })
     })
 </script>
-<script>
-    // 导航栏当前标签页
-    $(document).ready(function () {
-        var desktop_ul = document.getElementById("desktop-nav").children[1];
-        desktop_ul.className = 'layui-nav-item layui-this';
-        var mobile_ul = document.getElementById("mobile-nav").children[1];
-        mobile_ul.className = 'layui-nav-item layui-this'
-    })
-</script>
+<!--<script>-->
+<!--    // 导航栏当前标签页-->
+<!--    $(document).ready(function () {-->
+<!--        var desktop_ul = document.getElementById("desktop-nav").children[1];-->
+<!--        desktop_ul.className = 'layui-nav-item layui-this';-->
+<!--        // var mobile_ul = document.getElementById("mobile-nav").children[1];-->
+<!--        // mobile_ul.className = 'layui-nav-item layui-this'-->
+<!--    })-->
+<!--</script>-->
 <script>
     // 导航栏用户登录
     layui.use('layer', function () { //独立版的layer无需执行这一句

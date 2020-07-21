@@ -8,13 +8,25 @@
     width: 120px;
     margin-top: 10px;
 }
-/*电脑版导航栏logo*/
+/*手机版导航栏logo*/
 #mobile-nav {
     padding: 0;
 }
-#mobile-nav a{
+
+#mobile-nav span{
+    padding-right: 10px;
+}
+#mobile-nav span li {
     display: inline;
-    padding-left: 0;
+}
+#mobile-nav span a i{
+    font-size: 40px;
+    color: white;
+    padding-top:10px;
+    padding-left: 5px;
+}
+#mobile-nav .layui-nav-bar{
+    background-color: #393d49;
 }
 /*导航栏图标*/
 .nav-icon i {
@@ -28,4 +40,36 @@
 /*导航栏页面边距*/
 #desktop-nav {
     padding: 0 5%;
+}
+/*手机侧边导航栏*/
+.broadside-btn {
+    position: relative;
+    left: 0;
+    color: #777777;
+    padding: 0 10px;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: layui-icon!important;
+    cursor: pointer;
+    transition: 1s all
+}
+.broadside-btn:before {
+    content: '\e66b';
+}
+.broadside-btn-close {
+    left: 200px;
+    transition: 0.8s all
+}
+.broadside-btn-close:before {
+    content: '\e668';
+}
+.side-close{
+    margin-left: -200px;
+    transition: 0.8s all;
+}
+.side-show {
+    margin-left: 0;
+}
+.layui-logo {
+    height: 70px;
 }
