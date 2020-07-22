@@ -57,7 +57,7 @@
 <!--手机版顶部导航栏-->
 <div class="mobile-nav-header" id="mobile-nav">
     <nav>
-        <ul class="layui-nav" style="padding: 0">
+        <ul class="layui-nav" style="padding: 0;height: 60px">
             <li class="layui-nav-item">
                 <a class="broadside-btn"><i></i></a>
             </li>
@@ -143,6 +143,22 @@
             <span class="layui-nav-bar"></span></ul>
     </div>
 </div>
+<!--主体内容-->
+<div class="layui-row layui-col-space10 subject">
+<!--    页面左侧留空-->
+    <div class="layui-col-md1 layui-hide-xs" style="height: 1000px">
+    </div>
+<!--    页面中间主体部分-->
+    <div class="layui-col-xs12 layui-col-md10" >
+<!--        主体左侧部分-->
+        <div class="layui-col-md8" style="background-color: red;height: 500px"></div>
+<!--        主体右侧部分-->
+        <div class="layui-col-md4" style="background-color: yellow;height: 500px"></div>
+    </div>
+<!--    页面右侧留空-->
+    <div class="layui-col-md1 layui-hide-xs">
+    </div>
+</div>
 <h1>测试</h1>
 <h1>测试</h1>
 <h1>测试</h1>
@@ -217,7 +233,7 @@
         document.getElementById("desktop-nav").style.display = "none";
         document.getElementById("mobile-nav").classList.add("nav-fixed");
     } else {
-        // console.log("是电脑")
+        console.log("是电脑")
         document.getElementById("mobile-nav").style.display = "none";
         document.getElementById("mobile-side").style.display = "none";
         document.getElementById("desktop-nav").classList.add("nav-fixed");

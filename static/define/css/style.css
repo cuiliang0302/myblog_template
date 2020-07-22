@@ -2,6 +2,7 @@
 .nav-fixed {
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 /*电脑版导航栏logo*/
 #desktop-nav img{
@@ -73,4 +74,8 @@
 }
 .layui-logo {
     height: 70px;
+}
+/*主体内容*/
+.subject {
+    padding-top: 60px;
 }
