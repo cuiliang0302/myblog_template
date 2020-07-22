@@ -27,6 +27,7 @@
 }
 #mobile-nav .layui-nav-bar{
     background-color: #393d49;
+    padding-right: 0;
 }
 /*导航栏图标*/
 .nav-icon i {
