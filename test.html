@@ -9,22 +9,26 @@
     <link rel="stylesheet" href="static/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="static/define/css/style.css" media="all">
     <style>
-        #main {
-            margin-left: 0;
-            margin-right: 0;
+        .pop-search {
+            margin: 0 auto;
         }
-        div {
-            height: 1000px;
-
+        .pop-search input{
+            display: inline-block;
+            outline: none;
+            border: none;
+            padding: 0 80px 0 10px;
+            margin: 0;
+            height: 44px;
+            width: 410px;
+            color: #333;
+            font-size: 16px;
+            border-radius: 4px 0 0 4px;
         }
-        .d1 {
-            background-color: red;
+        .search-btn {
+            display: inline-block;
         }
-        .d2 {
-            background-color: yellow;
-        }
-        .d3 {
-            background-color: blue;
+        .search-input {
+            display: inline-block;
         }
     </style>
 </head>
@@ -34,90 +38,14 @@
 <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
 <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<div class="layui-carousel" id="test10">
-    <div carousel-item="">
-        <div><img src="media/carousel/carousel-1.jpg"></div>
-        <div><img src="media/carousel/carousel-2.jpg"></div>
-        <div><img src="media/carousel/carousel-3.jpg"></div>
-        <div><img src="media/carousel/carousel-4.jpg"></div>
-        <div><img src="media/carousel/carousel-5.jpg"></div>
+<div class="pop-search">
+    <div class="search-input">
+        <input type="text" placeholder="请输入要搜索的内容">
+    </div>
+    <div class="search-btn">
+        <button type="button" class="layui-btn layui-btn-normal">搜索</button>
     </div>
 </div>
-
-
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
-<script>
-    layui.use(['carousel', 'form'], function(){
-        var carousel = layui.carousel
-            ,form = layui.form;
-
-        //常规轮播
-        carousel.render({
-            elem: '#test1'
-            ,arrow: 'always'
-        });
-
-        //改变下时间间隔、动画类型、高度
-        carousel.render({
-            elem: '#test2'
-            ,interval: 1800
-            ,anim: 'fade'
-            ,height: '120px'
-        });
-
-        //设定各种参数
-        var ins3 = carousel.render({
-            elem: '#test3'
-        });
-        //图片轮播
-        carousel.render({
-            elem: '#test10'
-            ,width: '778px'
-            ,height: '440px'
-            ,interval: 5000
-        });
-
-        //事件
-        carousel.on('change(test4)', function(res){
-            console.log(res)
-        });
-
-        var $ = layui.$, active = {
-            set: function(othis){
-                var THIS = 'layui-bg-normal'
-                    ,key = othis.data('key')
-                    ,options = {};
-
-                othis.css('background-color', '#5FB878').siblings().removeAttr('style');
-                options[key] = othis.data('value');
-                ins3.reload(options);
-            }
-        };
-
-        //监听开关
-        form.on('switch(autoplay)', function(){
-            ins3.reload({
-                autoplay: this.checked
-            });
-        });
-
-        $('.demoSet').on('keyup', function(){
-            var value = this.value
-                ,options = {};
-            if(!/^\d+$/.test(value)) return;
-
-            options[this.name] = value;
-            ins3.reload(options);
-        });
-
-        //其它示例
-        $('.demoTest .layui-btn').on('click', function(){
-            var othis = $(this), type = othis.data('type');
-            active[type] ? active[type].call(this, othis) : '';
-        });
-    });
-</script>
 <script src="static/layui/layui.all.js" charset="utf-8"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 </body>
