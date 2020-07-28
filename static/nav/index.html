@@ -14,7 +14,7 @@
 <!--电脑版导航栏-->
 <nav>
     <div class="nav-left">
-        <span><a class="nav-show-btn"><i class="layui-icon layui-icon-shrink-right"></i></a></span>
+        <span><a class="nav-show-btn"><i></i></a></span>
         <span><a class="nav-logo" href="#"><img src="../../static/images/logo.png" alt="logo"></a></span>
     </div>
     <ul class="layui-nav">
@@ -70,7 +70,7 @@
             <div class="nav-logo">
                 <img src="../images/logo.png">
             </div>
-            <li data-name="home" class="layui-nav-item layui-nav-itemed">
+            <li data-name="home" class="layui-nav-item layui-nav-itemed side-home">
                 <a href="javascript:;" >
                     <i class="layui-icon layui-icon-home"></i>
                     <cite>主页</cite>
@@ -127,7 +127,7 @@
             <span class="layui-nav-bar"></span></ul>
     </div>
 </div>
-<main>
+<main class="page-main">
     <h1>好好学习天天向上</h1>
     <h1>好好学习天天向上</h1>
     <h1>好好学习天天向上</h1>
@@ -189,14 +189,17 @@
 </script>
 <script>
     // 导航栏当前标签页
-    // $(document).ready(function () {
-    //     var li = document.getElementsByClassName("layui-nav").children[1];
-    //     console.log(ul.text)
-    //     li.className = 'layui-nav-item layui-this';
-    // })
     $(function () {
         $(".layui-nav li:eq(0)").addClass("layui-this");
     })
+</script>
+<script>
+    // 手机侧边栏
+    $('.nav-show-btn').on("click",function () {
+        $('.nav-show-btn').toggleClass('nav-close-btn');
+        $('.side-close').toggleClass('side-show');
+        $('.page-main').toggleClass('page-main-side');
+    });
 </script>
 </body>
 </html>

@@ -9,26 +9,26 @@ body {
 .nav-left {
     position: absolute;
     left: 0;
-    width: 200px;
+    width: 260px;
     height: 60px;
     z-index: 1;
 }
 /*导航栏logo*/
 .nav-logo {
     font-size: 50px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    position: absolute;
+    left: 45px;
 }
 .nav-logo img {
-    width: 150px;
+    width: 130px;
 }
 /*手机版展开导航栏按钮*/
 .nav-show-btn {
-    padding-top: 10px;
-    display: inline-block;
-}
-.nav-show-btn i {
     display: none;
-    font-size: 40px;
-    color: white;
 }
 nav .layui-nav {
     padding-left: 200px;
@@ -39,7 +39,7 @@ nav .layui-nav {
     position: absolute;
     right: 0;
     top: 0;
-    width: 200px;
+    width: 120px;
     height: 60px;
     z-index: 1;
 }
@@ -47,8 +47,10 @@ nav .layui-nav {
     font-size: 30px;
     display: inline;
     float: right;
-    color: white;
+    color: #c4c5c9;
     line-height: 60px;
+    height: 60px;
+    transition: all 0.5s;
 }
 .nav-rignt span {
     display: inline-block;
@@ -57,17 +59,15 @@ nav .layui-nav {
     padding-right: 30px;
 }
 .nav-rignt i:hover {
-    color: #2ecc71;
-    font-size: 40px;
+    color: white;
+    box-sizing: border-box;
+    border-bottom:5px solid #5fb878;
 }
 .layui-side {
     display: none;
 }
 /*移动设备*/
 @media screen and (max-width: 768px) {
-    body {
-        background-color:pink;
-    }
     /*导航栏样式适配*/
     nav .layui-nav .layui-nav-item a {
         display: none;
@@ -75,10 +75,50 @@ nav .layui-nav {
     nav .layui-nav {
         height: 60px;
     }
-    .nav-show-btn i {
-        display: inline-block;
-    }
     .layui-side {
         display: block;
+    }
+    /*侧边导航栏按钮*/
+    .nav-show-btn {
+        font-family: layui-icon!important;
+        display: inline-block;
+        font-size: 40px;
+        color: #c4c5c9;
+        position: absolute;
+        top: 10px;
+        transition: 0.8s all;
+        z-index: 1000;
+    }
+    .nav-show-btn:before {
+        content: "\e66b";
+        color: #c4c5c9;
+    }
+    .nav-close-btn:before {
+        content: "\e668";
+        color: #c4c5c9;
+    }
+    /*侧边栏展开与折叠*/
+    .side-close {
+        left: -200px;
+        transition: 0.8s all;
+    }
+    .side-show {
+        left: 0;
+    }
+    .side-home {
+        padding-top: 60px;
+    }
+    .nav-close-btn {
+        left: 200px;
+        transition: 0.8s all;
+        z-index: 1000;
+    }
+    .page-main {
+        transition: 0.8s all;
+    }
+    .page-main-side {
+        padding-left: 200px;
+        transition: 0.8s all;
+        background-color: rgba(0,0,0,0.5);
     }
 }
