@@ -1,0 +1,84 @@
+body {
+    background-color: #f1f1f1;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+/*导航栏左侧部分*/
+.nav-left {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 60px;
+    z-index: 1;
+}
+/*导航栏logo*/
+.nav-logo {
+    font-size: 50px;
+}
+.nav-logo img {
+    width: 150px;
+}
+/*手机版展开导航栏按钮*/
+.nav-show-btn {
+    padding-top: 10px;
+    display: inline-block;
+}
+.nav-show-btn i {
+    display: none;
+    font-size: 40px;
+    color: white;
+}
+nav .layui-nav {
+    padding-left: 200px;
+}
+/*导航右侧图标*/
+.nav-rignt {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 60px;
+    z-index: 1;
+}
+.nav-rignt i {
+    font-size: 30px;
+    display: inline;
+    float: right;
+    color: white;
+    line-height: 60px;
+}
+.nav-rignt span {
+    display: inline-block;
+    height: 100%;
+    float: right;
+    padding-right: 30px;
+}
+.nav-rignt i:hover {
+    color: #2ecc71;
+    font-size: 40px;
+}
+.layui-side {
+    display: none;
+}
+/*移动设备*/
+@media screen and (max-width: 768px) {
+    body {
+        background-color:pink;
+    }
+    /*导航栏样式适配*/
+    nav .layui-nav .layui-nav-item a {
+        display: none;
+    }
+    nav .layui-nav {
+        height: 60px;
+    }
+    .nav-show-btn i {
+        display: inline-block;
+    }
+    .layui-side {
+        display: block;
+    }
+}
