@@ -41,6 +41,8 @@
         <li class="layui-nav-item layui-hide-xs"><a href="">时间轴</a></li>
         <li class="layui-nav-item layui-hide-xs"><a href="">留言板</a></li>
         <li class="layui-nav-item layui-hide-xs"><a href="">关于博主</a></li>
+        <li class="layui-nav-item layui-hide-xs"><a href="list.html">文章列表</a></li>
+        <li class="layui-nav-item layui-hide-xs"><a href="">文章内容</a></li>
         <!--用户已登录-->
         <li class="layui-nav-item nav-user-online">
             <a href="javascript:">admin</a>
@@ -127,6 +129,18 @@
                     <cite>关于博主</cite>
                 </a>
             </li>
+            <li data-name="get" class="layui-nav-item">
+                <a href="list.html">
+                    <i class="layui-icon layui-icon-auz"></i>
+                    <cite>文章列表</cite>
+                </a>
+            </li>
+            <li data-name="get" class="layui-nav-item">
+                <a href="javascript:">
+                    <i class="layui-icon layui-icon-auz"></i>
+                    <cite>文章内容</cite>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
@@ -138,7 +152,7 @@
         </div>
         <!--    页面主体部分-->
         <div class="layui-col-xs12 layui-col-sm10 layui-col-md8 page-main-centre">
-            <div class="layui-row layui-col-space30">
+            <div class="layui-row layui-col-space30 main-centre">
                 <!--            主体左侧部分-->
                 <div class="layui-col-md9 main-left">
                     <!--            轮播图片-->
@@ -526,15 +540,15 @@
                             </div>
                             <div class="about-logo">
                         <span>
-                            <i class="fab fa-qq"></i>
+                            <i class="layui-icon layui-icon-login-qq"></i>
                         </span>
-                                <span>
-                            <img src="static/images/wechat.png" width="20px">
+                        <span>
+                            <i class="layui-icon layui-icon-login-wechat"></i>
                         </span>
-                                <span>
+                        <span>
                             <img src="static/images/csdn.png" width="20px">
                         </span>
-                                <span>
+                        <span>
                             <i class="fab fa-github"></i>
                         </span>
                             </div>
