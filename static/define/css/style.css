@@ -300,6 +300,10 @@ h4 {
     border-radius: 5px;
 }
 /*各个不同颜色标签*/
+.label-color-0 a{
+    /*text-decoration: none;*/
+    background-color: #999;
+}
 .label-color-1 a{
     /*text-decoration: none;*/
     background-color: red;
@@ -393,7 +397,7 @@ h4 {
 /*目录*/
 .main-centre .catalogue aside {
     position: fixed;
-    left: 80px;
+    left: 10px;
 }
 .main-centre .article-title h1 {
     font-size: 35px;
@@ -413,6 +417,40 @@ h4 {
 .main-centre .article-info span {
     color: #74b9ff;
     padding-left: 30px;
+}
+.main-centre .article-relevance {
+    margin-top: 50px;
+    background-color: #f7f7fc;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+}
+.main-centre .article-relevance > a {
+    width: 29%;
+    display: inline-block;
+    padding-top: 20px;
+    line-height: 30px;
+    height: 80px;
+    transition: all 1s;
+}
+.main-centre .article-relevance > a:hover {
+    background-color: #74b9ff;
+    color: white;
+}
+.main-centre .article-relevance div {
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    line-height: 30px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+}
+.main-centre .article-relevance .article-last {
+    float: left;
+}
+.main-centre .article-relevance .article-next {
+    float: right;
 }
 /*移动设备*/
 @media screen and (max-width: 768px) {
@@ -506,4 +544,6 @@ h4 {
     .page-main .main-centre {
         margin: 0;
     }
+    /*文章内容页上下篇链接*/
+
 }
