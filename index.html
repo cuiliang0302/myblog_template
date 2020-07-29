@@ -42,7 +42,7 @@
         <li class="layui-nav-item layui-hide-xs"><a href="">留言板</a></li>
         <li class="layui-nav-item layui-hide-xs"><a href="">关于博主</a></li>
         <li class="layui-nav-item layui-hide-xs"><a href="list.html">文章列表</a></li>
-        <li class="layui-nav-item layui-hide-xs"><a href="">文章内容</a></li>
+        <li class="layui-nav-item layui-hide-xs"><a href="show.html">文章内容</a></li>
         <!--用户已登录-->
         <li class="layui-nav-item nav-user-online">
             <a href="javascript:">admin</a>
@@ -136,7 +136,7 @@
                 </a>
             </li>
             <li data-name="get" class="layui-nav-item">
-                <a href="javascript:">
+                <a href="show.html">
                     <i class="layui-icon layui-icon-auz"></i>
                     <cite>文章内容</cite>
                 </a>
@@ -148,10 +148,9 @@
 <main class="page-main">
     <div class="layui-row">
         <!--    页面左侧留空-->
-        <div class="layui-hide-xs layui-col-sm1 layui-col-md2 left-null">
-        </div>
-        <!--    页面主体部分-->
-        <div class="layui-col-xs12 layui-col-sm10 layui-col-md8 page-main-centre">
+    <div class="layui-hide-xs layui-col-sm1 layui-col-md2 left-null"></div>
+    <!--    页面主体部分-->
+    <div class="layui-col-xs12 layui-col-sm10 layui-col-md8 page-main-centre">
             <div class="layui-row layui-col-space30 main-centre">
                 <!--            主体左侧部分-->
                 <div class="layui-col-md9 main-left">
@@ -189,12 +188,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-1">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-2">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -213,14 +218,20 @@
                                 <p class="txt-cont hidden-xs">
                                     <a href="#">这是第二篇最新文章的摘要信息，锄禾日当午，汗滴禾下土。这是第二篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
-                                <div>
-                            <span class="label-tag label-color-2">
-                                <a>Python</a>
-                            </span>
-                                    <time>
+                                    <div>
+                                    <span class="label-tag label-color-4">
+                                        <a>Linux</a>
+                                    </span>
+                                        <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
-                                </div>
+                                    </span>
+                                        <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                        <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
+                                    </div>
                             </div>
                         </div>
                         <div class="layui-row layui-col-space20 article-box">
@@ -239,12 +250,18 @@
                                     <a href="#">这是第三篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐这是第三篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐这是第三篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-3">
-                                <a>MySQL</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-3">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -264,12 +281,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-2">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -289,12 +312,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-1">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -314,12 +343,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-6">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -339,12 +374,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-5">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -364,12 +405,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-4">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -389,12 +436,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-2">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -414,12 +467,18 @@
                                     <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
                                 <div>
-                            <span class="label-tag label-color-4">
-                                <a>Linux</a>
-                            </span>
-                                    <time>
+                                    <span class="label-tag label-color-3">
+                                        <a>Linux</a>
+                                    </span>
+                                    <span>
                                         <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </time>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-book-reader"> 32</i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-star-half-alt"> 4.8</i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -590,8 +649,7 @@
                     </aside>
                 </div>
             </div>
-        </div>
-    </div>
+        </div></div>
     <!--    页面右侧留空-->
     <div class="layui-hide-xs layui-col-sm1 layui-col-md2"></div>
 </main>

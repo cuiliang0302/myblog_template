@@ -186,14 +186,14 @@ h4 {
 }
 
 /*主页侧边栏*/
-.post-right-item {
+.post-right-item,.catalogue aside {
     padding: 15px 20px 15px 20px;
     background-color: #FFF;
     box-shadow: 0 1px 4px rgba(0,0,0,.1);
     margin-bottom: 20px;
 }
 /*主页侧边栏栏目图标*/
-.post-right-item strong i {
+.post-right-item strong i , .catalogue aside strong i {
     color: #1E9FFF;
     font-size: 25px;
 }
@@ -332,8 +332,8 @@ h4 {
     /*text-decoration: none;*/
     background-color: midnightblue;
 }
-/*主页最新文章创建时间*/
-time i {
+/*主页最新文章信息*/
+.article-box span i {
     padding-left: 20px;
     font-size: 14px;
     color: #999;
@@ -388,6 +388,31 @@ time i {
 }
 .location a {
     color: #d9534f;
+}
+/*文章内容页*/
+/*目录*/
+.main-centre .catalogue aside {
+    position: fixed;
+    left: 80px;
+}
+.main-centre .article-title h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+/*文章正文*/
+.main-centre .article-info {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background-color: #f7f7fc;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-centre .article-info span {
+    color: #74b9ff;
+    padding-left: 30px;
 }
 /*移动设备*/
 @media screen and (max-width: 768px) {
@@ -463,6 +488,7 @@ time i {
     .nav-rignt {
         width: 100px;
     }
+    /*主页移动端适配*/
     .page-main {
         padding-top: 40px;
     }

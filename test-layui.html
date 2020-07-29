@@ -10,68 +10,82 @@
     <link rel="stylesheet" href="static/define/css/style.css" media="all">
 </head>
 <body>
-<nav>
-    <ul class="layui-nav" id="desktop-nav">
-        <a class="nav-logo" href="#"><img src="static/images/logo.png"></a>
-        <li class="layui-nav-item"><a href="">首页</a></li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">文章分类</a>
-            <dl class="layui-nav-child">
-                <dd><a href="">MySQL</a></dd>
-                <dd><a href="">Linux</a></dd>
-                <dd><a href="">kubernets</a></dd>
-                <dd><a href="">MySQL</a></dd>
-                <dd><a href="">Linux</a></dd>
-                <dd><a href="">kubernets</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">电子书</a>
-            <dl class="layui-nav-child">
-                <dd><a href="">MySQL</a></dd>
-                <dd><a href="">Linux</a></dd>
-                <dd class="layui-this"><a href="">python</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item layui-hide-xs"><a href="">时间轴</a></li>
-        <li class="layui-nav-item layui-hide-xs"><a href="">留言板</a></li>
-        <li class="layui-nav-item layui-hide-xs"><a href="">关于博主</a></li>
-        <span class="nav-icon">
-        <li class="layui-nav-item layui-hide-xs">
-            <a href="#" class="zznav-search"><i class="layui-icon layui-icon-search"></i></a>
-            <!--        用户未登录-->
-        <li class="layui-nav-item layui-hide-xs">
-            <a href="#" class="nav-user"><i class="layui-icon layui-icon-friends"></i></a>
-            <!--        用户已登录-->
-            <!--        <li class="layui-nav-item">-->
-            <!--        <a href="javascript:;">admin</a>-->
-            <!--        <dl class="layui-nav-child">-->
-            <!--            <dd><a href="">个人中心</a></dd>-->
-            <!--            <dd><a href="">退出登录</a></dd>-->
-            <!--        </dl>-->
-        </li>
-    </span>
-    </ul>
-</nav>
+<!--<nav>-->
+<!--    <ul class="layui-nav" id="desktop-nav">-->
+<!--        <a class="nav-logo" href="#"><img src="static/images/logo.png"></a>-->
+<!--        <li class="layui-nav-item"><a href="">首页</a></li>-->
+<!--        <li class="layui-nav-item">-->
+<!--            <a href="javascript:;">文章分类</a>-->
+<!--            <dl class="layui-nav-child">-->
+<!--                <dd><a href="">MySQL</a></dd>-->
+<!--                <dd><a href="">Linux</a></dd>-->
+<!--                <dd><a href="">kubernets</a></dd>-->
+<!--                <dd><a href="">MySQL</a></dd>-->
+<!--                <dd><a href="">Linux</a></dd>-->
+<!--                <dd><a href="">kubernets</a></dd>-->
+<!--            </dl>-->
+<!--        </li>-->
+<!--        <li class="layui-nav-item">-->
+<!--            <a href="javascript:;">电子书</a>-->
+<!--            <dl class="layui-nav-child">-->
+<!--                <dd><a href="">MySQL</a></dd>-->
+<!--                <dd><a href="">Linux</a></dd>-->
+<!--                <dd class="layui-this"><a href="">python</a></dd>-->
+<!--            </dl>-->
+<!--        </li>-->
+<!--        <li class="layui-nav-item layui-hide-xs"><a href="">时间轴</a></li>-->
+<!--        <li class="layui-nav-item layui-hide-xs"><a href="">留言板</a></li>-->
+<!--        <li class="layui-nav-item layui-hide-xs"><a href="">关于博主</a></li>-->
+<!--        <span class="nav-icon">-->
+<!--        <li class="layui-nav-item layui-hide-xs">-->
+<!--            <a href="#" class="zznav-search"><i class="layui-icon layui-icon-search"></i></a>-->
+<!--            &lt;!&ndash;        用户未登录&ndash;&gt;-->
+<!--        <li class="layui-nav-item layui-hide-xs">-->
+<!--            <a href="#" class="nav-user"><i class="layui-icon layui-icon-friends"></i></a>-->
+<!--            &lt;!&ndash;        用户已登录&ndash;&gt;-->
+<!--            &lt;!&ndash;        <li class="layui-nav-item">&ndash;&gt;-->
+<!--            &lt;!&ndash;        <a href="javascript:;">admin</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;        <dl class="layui-nav-child">&ndash;&gt;-->
+<!--            &lt;!&ndash;            <dd><a href="">个人中心</a></dd>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <dd><a href="">退出登录</a></dd>&ndash;&gt;-->
+<!--            &lt;!&ndash;        </dl>&ndash;&gt;-->
+<!--        </li>-->
+<!--    </span>-->
+<!--    </ul>-->
+<!--</nav>-->
 <div class="layui-row">
-<!--    页面左侧留空-->
-    <div class="layui-hide-xs layui-col-sm1 layui-col-md2">
-        <div>移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+    <div class="layui-hide-xs layui-col-md1" style="height: 500px;background-color: saddlebrown;">
     </div>
-<!--    页面主体部分-->
-    <div class="layui-col-xs12 layui-col-sm10 layui-col-md8">
+    <div class="layui-col-xs12 layui-col-md10" style="height: 500px;background-color: hotpink;">
         <div class="layui-row layui-col-space30">
-            <!--            主体左侧部分-->
-            <div class="layui-col-md8" style="background-color: red;height: 1000px"></div>
-            <!--            主体右侧部分-->
-            <div class="layui-col-md4" style="background-color: yellow;height: 1000px"></div>
+            <div class="layui-col-md2" style="height: 300px;background-color: yellow;"></div>
+            <div class="layui-col-md7" style="height: 300px;background-color: red;"></div>
+            <div class="layui-col-md3" style="height: 300px;background-color: blue;"></div>
         </div>
     </div>
-<!--    页面右侧留空-->
-    <div class="layui-hide-xs layui-col-sm1 layui-col-md2">
-        <div>移动：4/12 | 平板：12/12 | 桌面：4/12</div>
+    <div class="layui-hide-xs layui-col-md1" style="height: 500px;background-color: limegreen;">
     </div>
 </div>
+<!--<div class="layui-row">-->
+<!--&lt;!&ndash;    页面左侧留空&ndash;&gt;-->
+<!--    <div class="layui-col-md1">-->
+<!--        <div>移动：6/12 | 平板：6/12 | 桌面：4/12</div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    页面主体部分&ndash;&gt;-->
+<!--    <div class="layui-col-xs12 layui-col-md10 layui-col-md8">-->
+<!--        <div class="layui-row layui-col-space30">-->
+<!--            &lt;!&ndash;            主体左侧部分&ndash;&gt;-->
+<!--            <div class="layui-col-md8" style="background-color: red;height: 1000px"></div>-->
+<!--            &lt;!&ndash;            主体右侧部分&ndash;&gt;-->
+<!--            <div class="layui-col-md4" style="background-color: yellow;height: 1000px"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    页面右侧留空&ndash;&gt;-->
+<!--    <div class="layui-col-md1">-->
+<!--        <div>移动：4/12 | 平板：12/12 | 桌面：4/12</div>-->
+<!--    </div>-->
+
+<!--</div>-->
 <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
 <!--[if lt IE 9]>
 <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
