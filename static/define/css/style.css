@@ -1,88 +1,165 @@
 body {
     background-color: #f1f1f1;
 }
-/*导航栏固定定位*/
+* {
+    padding: 0;
+    margin: 0;
+}
+/*导航栏固定*/
 .nav-fixed {
     position: fixed;
     width: 100%;
+}
+/*图片放大效果*/
+img{
+    transition: all 2s;
+}
+div img:hover{
+    transform: scale(1.05);
+}
+/*导航栏左侧部分*/
+.nav-left {
+    position: absolute;
+    left: 0;
+    width: 260px;
+    height: 60px;
     z-index: 1;
 }
-/*电脑版导航栏logo*/
-#desktop-nav img{
+/*导航栏logo*/
+.nav-logo {
+    font-size: 50px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    position: absolute;
+    left: 45px;
+}
+.nav-logo img {
+    width: 130px;
+}
+/*手机版展开导航栏按钮*/
+.nav-show-btn {
+    display: none;
+}
+nav .layui-nav {
+    padding-left: 200px;
+}
+/*导航右侧图标*/
+.nav-user-online {
+    float: right;
+    margin-right: 5%;
+}
+.nav-rignt {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 120px;
-    margin-top: 10px;
+    height: 60px;
+    z-index: 1;
+    margin-right: 10%;
 }
-/*手机版导航栏logo*/
-#mobile-nav {
-    padding: 0;
+.nav-rignt span {
+    display: inline-block;
+    height: 100%;
+    float: right;
+    padding-right: 30px;
 }
-
-#mobile-nav span{
-    padding-right: 10px;
-}
-#mobile-nav span li {
-    display: inline;
-}
-#mobile-nav span a i{
-    font-size: 40px;
-    color: white;
-    padding-top:10px;
-    padding-left: 5px;
-}
-#mobile-nav .layui-nav-bar{
-    background-color: #393d49;
-    padding-right: 0;
-}
-/*导航栏图标*/
-.nav-icon i {
+.nav-rignt span a {
     font-size: 30px;
     display: inline;
     float: right;
+    color: #c4c5c9;
+    line-height: 60px;
+    height: 60px;
+    transition: all 0.5s;
 }
-.nav-icon {
-    float: right;
+.nav-rignt span a i {
+    font-size: 30px;
 }
-/*导航栏页面边距*/
-#desktop-nav {
-    padding: 0 5%;
+.nav-rignt a:hover {
+    color: white;
+    box-sizing: border-box;
+    border-bottom:5px solid #5fb878;
 }
-/*手机侧边导航栏*/
-.broadside-btn {
-    position: relative;
-    left: 0;
-    color: #777777;
-    padding: 0 10px;
-    font-size: 40px;
-    text-decoration: none;
-    font-family: layui-icon!important;
+.layui-side {
+    display: none;
+}
+/*导航栏滑动搜索框*/
+nav {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+.search-box {
+    height: 60px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+.search-box-show {
+    top: 60px;
+    transition: all 1s;
+}
+.search-form {
+    height: 40px;
+    padding: 10px 25%;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.search-form input {
+    width: 65%;
+    height: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #555;
+    border: none;
+    background: #fff;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.search-form button {
+    width: 20%;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    vertical-align: middle;
+    background: #008cd6;
+    outline: none;
     cursor: pointer;
-    transition: 1s all
+    transition: background .2s ease-in-out;
 }
-.broadside-btn:before {
-    content: '\e66b';
+.nav-search {
+    font-family: layui-icon!important;
+    transition: all 1s;
 }
-.broadside-btn-close {
-    left: 200px;
-    transition: 0.8s all
+.nav-search:before {
+    content: "\e615";
 }
-.broadside-btn-close:before {
-    content: '\e668';
+.nav-search-close {
+    transition: all 1s;
 }
-.side-close{
-    margin-left: -200px;
-    transition: 0.8s all;
+.nav-search-close:before {
+    content: "\1006";
 }
-.side-show {
-    margin-left: 0;
+/*首页主体部分*/
+.page-main {
+    padding-top: 60px;
 }
-.layui-logo {
-    height: 70px;
+.page-main .left-null {
+    height: 1px;
 }
-/*主体内容*/
-#main {
-    padding-top: 80px;
-    margin-left: 0;
-    margin-right: 0;
+.page-main .main-left {
+    padding: 20px 0 0 0;
+}
+.page-main .page-main-centre {
+    margin-top: 15px;
 }
 /*轮播图片*/
 .carousel-img img {
@@ -125,17 +202,17 @@ h4 {
     font-size: 15px;
 }
 /*热门文章*/
-#hot-list {
+.post-right-item .hot-list {
     padding-left: 20px;
     color: #d9534f;
     font-size: 16px;
     margin-bottom: 0;
 }
-#hot-list li {
+.post-right-item .hot-list li {
     list-style:decimal;
 }
 /*热门文章标题名称列表*/
-#hot-list li a {
+.post-right-item .hot-list li a {
     display: block;
     padding: 6px 20px 6px 10px;
     position: relative;
@@ -145,7 +222,7 @@ h4 {
     line-height: 22px;
 }
 /*热门文章标题列表悬停效果*/
-#hot-list li a:hover {
+.post-right-item .hot-list li a:hover {
     font-weight: bold;
     color: #d9534f;
     text-decoration:none;
@@ -208,13 +285,6 @@ h4 {
 /*首页最新文章摘要悬停效果*/
 .txt-cont a:hover{
     color: #696969;
-}
-/*图片放大效果*/
-img{
-    transition: all 2s;
-}
-div img:hover{
-    transform: scale(1.05);
 }
 /*文章标签*/
 .label-tag a{
@@ -304,17 +374,94 @@ time i {
     color: white;
 }
 .footer a:hover {
-    font-size: 15px;
+    font-weight: bold;
 }
 .footer p {
     display: inline;
     color: #95999c;
 }
-/*分页菜单*/
-#page {
-    text-align: center;
-}
-.nav-fixed {
-    position: fixed;
-    width: 100%;
+/*移动设备*/
+@media screen and (max-width: 768px) {
+    /*导航栏样式适配*/
+    /*nav .layui-nav .layui-nav-item a {*/
+    /*    display: none;*/
+    /*}*/
+    nav .layui-nav {
+        height: 60px;
+    }
+    .layui-side {
+        display: block;
+    }
+    /*侧边导航栏按钮*/
+    .nav-show-btn {
+        font-family: layui-icon!important;
+        display: inline-block;
+        font-size: 40px;
+        color: #c4c5c9;
+        position: absolute;
+        top: 10px;
+        transition: 0.8s left;
+        z-index: 1000;
+    }
+    .nav-show-btn:before {
+        content: "\e66b";
+        color: #c4c5c9;
+    }
+    .nav-close-btn:before {
+        content: "\e668";
+        color: #c4c5c9;
+    }
+    /*侧边栏展开与折叠*/
+    .side-close {
+        left: -200px;
+        transition: 0.8s all;
+    }
+    .side-show {
+        left: 0;
+    }
+    .side-home {
+        padding-top: 60px;
+    }
+    .nav-close-btn {
+        left: 200px;
+        transition: 0.8s left;
+        z-index: 1000;
+    }
+    /*主页内容侧滑效果*/
+    .page-main {
+        transition: 0.8s all;
+    }
+    .page-main-side {
+        /*padding-left: 200px;*/
+        width: 100%;
+        transition: 0.8s all;
+        background-color: rgba(0,0,0,0.5);
+    }
+    /*搜索栏滑动下拉效果*/
+    .search-box .search-form {
+        padding: 10px 10%;
+    }
+    .search-box .search-form input {
+        width: 60%;
+    }
+    .nav-user-online {
+        z-index: 3;
+        margin-right: 0;
+    }
+    .nav-rignt span {
+        padding-right: 50%;
+    }
+    .nav-rignt {
+        width: 100px;
+    }
+    .page-main .main-left {
+        padding-top: 0;
+    }
+    .page-main .main-left .index-new {
+        padding: 10px 10px 10px 20px;
+        margin-bottom: 0;
+    }
+    .page-main .main-right {
+        padding-right: 0;
+    }
 }
