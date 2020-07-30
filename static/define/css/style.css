@@ -418,6 +418,43 @@ h4 {
     color: #74b9ff;
     padding-left: 30px;
 }
+/*文章点赞打赏*/
+.main-centre .article-movement {
+    margin-top: 50px;
+    font-size: 20px;
+}
+.main-centre .article-movement p {
+    text-align: center;
+    font-size: 18px;
+    color: #2ecc71;
+}
+.main-centre .article-movement div {
+    height: 50px;
+    width: 300px;
+    margin: 20px auto;
+    background-color: greenyellow;
+}
+.main-centre .article-movement .movement-left {
+    float: left;
+    background: #fff;
+    width: 120px;
+    display: block;
+    border: 1px solid #ddd;
+}
+.main-centre .article-movement .movement-center {
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    background-color: #CD96CD;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+.main-centre .article-movement .movement-right {
+    float: right;
+}
+/*文章相关链接*/
 .main-centre .article-relevance {
     margin-top: 50px;
     background-color: #f7f7fc;
@@ -428,23 +465,24 @@ h4 {
 .main-centre .article-relevance > a {
     width: 29%;
     display: inline-block;
-    padding-top: 20px;
+    height: 75px;
+    padding-top: 15px;
     line-height: 30px;
-    height: 80px;
     transition: all 1s;
 }
 .main-centre .article-relevance > a:hover {
     background-color: #74b9ff;
+    border-radius: 10px;
     color: white;
 }
 .main-centre .article-relevance div {
     border-left: 2px solid #ccc;
     border-right: 2px solid #ccc;
     line-height: 30px;
-    margin-top: 10px;
     display: inline-block;
     text-align: center;
     width: 40%;
+    /*background-color: #ecf0f1;*/
 }
 .main-centre .article-relevance .article-last {
     float: left;
