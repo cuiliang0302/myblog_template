@@ -405,6 +405,7 @@ h4 {
     font-weight: bold;
 }
 /*文章正文*/
+/*文章信息*/
 .main-centre .article-info {
     height: 30px;
     line-height: 30px;
@@ -418,8 +419,68 @@ h4 {
     color: #74b9ff;
     padding-left: 30px;
 }
+/*文章点赞打赏*/
+.main-centre .article-action {
+    margin-top: 30px;
+}
+.main-centre .article-action p{
+    font-size: 20px;
+    color: #2ecc71;
+    text-align: center;
+}
+.main-centre .article-action div{
+    position: relative;
+    width: 300px;
+    height: 80px;
+    margin: 20px auto;
+}
+.main-centre .article-action a {
+    height: 40px;
+    width: 30%;
+    top:25%;
+}
+.main-centre .article-action i {
+    line-height: 40px;
+    font-size: 20px;
+}
+.main-centre i:hover ,.main-centre .article-reward:hover {
+    color: white;
+}
+
+.main-centre .article-action .article-like {
+    position: absolute;
+    padding-left: 30px;
+    background: radial-gradient(circle at 100% 50%, transparent 25px, #ccc 16px) right top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.main-centre .article-action .article-reward {
+    position: absolute;
+    background-color: red;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 35px;
+    font-size: 20px;
+    left: 50%;
+    z-index: 1;
+    margin-left: -35px;
+    margin-top: -15px;
+}
+.main-centre .article-action .article-share{
+    position: absolute;
+    right: 0;
+    background: radial-gradient(circle at 0 50%, transparent 25px, #ccc 16px) right top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+.main-centre .article-action .article-share i{
+    float: right;
+}
+/*文章上下篇链接*/
 .main-centre .article-relevance {
-    margin-top: 50px;
     background-color: #f7f7fc;
     text-align: center;
     height: 100%;
@@ -436,6 +497,7 @@ h4 {
 .main-centre .article-relevance > a:hover {
     background-color: #74b9ff;
     color: white;
+    border-radius: 10px;
 }
 .main-centre .article-relevance div {
     border-left: 2px solid #ccc;
