@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>崔亮的博客</title>
+    <title>留言板</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -145,28 +145,23 @@
 <main class="page-main">
     <div class="layui-row">
         <!--    页面左侧留空-->
-    <div class="layui-hide-xs layui-col-sm1 layui-col-md2 left-null"></div>
-    <!--    页面主体部分-->
-    <div class="layui-col-xs12 layui-col-sm10 layui-col-md8 page-main-centre">
+        <div class="layui-hide-xs layui-col-sm1 layui-col-md2 left-null">
+        </div>
+        <!--    页面主体部分-->
+        <div class="layui-col-xs12 layui-col-sm10 layui-col-md8 page-main-centre">
             <div class="layui-row layui-col-space30 main-centre">
                 <!--            主体左侧部分-->
                 <div class="layui-col-md9 main-left">
-                    <!--            轮播图片-->
-                    <div class="carousel-img layui-hide-xs layui-carousel" id="test10">
-                        <div carousel-item="">
-                            <div><img src="media/carousel/carousel-1.jpg"></div>
-                            <div><img src="media/carousel/carousel-2.jpg"></div>
-                            <div><img src="media/carousel/carousel-3.jpg"></div>
-                            <div><img src="media/carousel/carousel-4.jpg"></div>
-                            <div><img src="media/carousel/carousel-5.jpg"></div>
-                        </div>
-                    </div>
-                    <!--            最新文章-->
+                    <!--                    位置信息-->
+                    <blockquote class="layui-elem-quote location suspend">
+                        <p>您的位置： <a href="#">首页</a> » <span>Python</span></p>
+                    </blockquote>
+                    <!--            文章列表-->
                     <div class="index-new">
                         <h4>
                             <strong>
                                 <i class="fas fa-newspaper"></i>
-                                <span>最新文章</span>
+                                <span>文章列表</span>
                             </strong>
                         </h4>
                         <div class="layui-row layui-col-space20 article-box">
@@ -189,7 +184,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -215,20 +210,20 @@
                                 <p class="txt-cont hidden-xs">
                                     <a href="#">这是第二篇最新文章的摘要信息，锄禾日当午，汗滴禾下土。这是第二篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
                                 </p>
-                                    <div>
+                                <div>
                                     <span class="label-tag label-color-4">
                                         <a>Linux</a>
                                     </span>
-                                        <span>
-                                            <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                    <span>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
-                                        <span>
+                                    <span>
                                         <i class="fas fa-book-reader"> 32</i>
                                     </span>
-                                        <span>
+                                    <span>
                                         <i class="fas fa-star-half-alt"> 4.8</i>
                                     </span>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="layui-row layui-col-space20 article-box">
@@ -251,7 +246,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -282,7 +277,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -313,7 +308,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -328,7 +323,7 @@
                             <div class="layui-col-xs12 layui-col-md4">
                                 <div class="img-cover">
                                     <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%" alt="">
+                                        <img src="media/picture/1.jpg" width="100%">
                                     </a>
                                 </div>
                             </div>
@@ -344,7 +339,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -375,7 +370,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -406,7 +401,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -437,7 +432,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -468,7 +463,7 @@
                                         <a>Linux</a>
                                     </span>
                                     <span>
-                                        <i class="fas fa-clock"><span class="timeago" datetime="2020-06-30 09:20:00"></span></i>
+                                        <i class="fas fa-clock"> 2020年7月16日</i>
                                     </span>
                                     <span>
                                         <i class="fas fa-book-reader"> 32</i>
@@ -479,6 +474,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="paging"></div>
                     </div>
                 </div>
                 <!--            主体右侧部分-->
@@ -598,13 +594,13 @@
                         <span>
                             <i class="layui-icon layui-icon-login-qq"></i>
                         </span>
-                        <span>
+                                <span>
                             <i class="layui-icon layui-icon-login-wechat"></i>
                         </span>
-                        <span>
+                                <span>
                             <img src="static/images/csdn.png" width="20px">
                         </span>
-                        <span>
+                                <span>
                             <i class="fab fa-github"></i>
                         </span>
                             </div>
@@ -646,9 +642,10 @@
                     </aside>
                 </div>
             </div>
-        </div></div>
-    <!--    页面右侧留空-->
-    <div class="layui-hide-xs layui-col-sm1 layui-col-md2"></div>
+        </div>
+        <!--    页面右侧留空-->
+        <div class="layui-hide-xs layui-col-sm1 layui-col-md2"></div>
+    </div>
 </main>
 <footer>
     <div class="footer">
@@ -668,11 +665,9 @@
 </footer>
 <script src="static/layui/layui.js" charset="utf-8"></script>
 <script src="static/jquery-3.5.1/jquery-3.5.1.min.js" charset="utf-8"></script>
-<script src="static/js/timeago.js" charset="utf-8"></script>
 <script>
-    //导航的hover效果、二级菜单等功能，需要依赖element模块
     layui.use('element', function () {
-        var element = layui.element;
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
 
         //监听导航点击
         element.on('nav(demo)', function (elem) {
@@ -685,7 +680,6 @@
     // 导航栏当前标签页
     $(function () {
         $(".layui-nav li:eq(0)").addClass("layui-this");
-        $("#LAY-system-side-menu li:eq(0)").addClass("layui-this");
     })
 </script>
 <script>
@@ -765,17 +759,33 @@
         });
     });
 </script>
-<script >
-    // 日期显示为几天前
-    layui.config({
-        version: true,
-        base:  'assets/module/'
-    }).extend({
-        timeago: 'timeago'
-    }).use(['timeago'], function () {
-        var $ = layui.jquery;
-        var timeago = layui.timeago;
-        timeago.render($('.timeago'));
+<script>
+    // 分页
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+            ,layer = layui.layer;
+        laypage.render({
+            elem: 'paging'
+            ,count: 1000
+            ,layout: ['prev', 'page', 'next','limit',]
+        });
+        //调用分页
+        laypage.render({
+            elem: 'demo20'
+            ,count: data.length
+            ,jump: function(obj){
+                //模拟渲染
+                document.getElementById('biuuu_city_list').innerHTML = function(){
+                    var arr = []
+                        ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    layui.each(thisData, function(index, item){
+                        arr.push('<li>'+ item +'</li>');
+                    });
+                    return arr.join('');
+                }();
+            }
+        });
+
     });
 </script>
 </body>
