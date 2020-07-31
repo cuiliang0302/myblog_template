@@ -78,7 +78,6 @@ nav .layui-nav {
 /*导航右侧图标*/
 .nav-user-online {
     float: right;
-    margin-right: 5%;
 }
 
 .nav-rignt {
@@ -96,7 +95,6 @@ nav .layui-nav {
     display: inline-block;
     height: 100%;
     float: right;
-    padding-right: 30px;
 }
 
 .nav-rignt span a {
@@ -106,7 +104,6 @@ nav .layui-nav {
     color: #c4c5c9;
     line-height: 60px;
     height: 60px;
-    margin-right: 50px;
     transition: all 0.5s;
 }
 
@@ -717,11 +714,11 @@ h4 {
 .page-main .time-shaft a {
     font-size: 20px;
     color: #74b9ff;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .page-main .time-shaft a:hover {
     color: #0984e3;
-    font-size: 25px;
+    font-size: 21px;
     text-decoration: none;
 }
 /*移动设备*/
@@ -806,9 +803,6 @@ h4 {
         margin-right: 0;
     }
 
-    .nav-rignt span {
-        padding-right: 50%;
-    }
 
     .nav-rignt {
         width: 100px;

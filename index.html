@@ -44,7 +44,7 @@
         <li class="layui-nav-item layui-hide-xs"><a href="list.html">文章列表</a></li>
         <li class="layui-nav-item layui-hide-xs"><a href="show.html">文章内容</a></li>
         <!--用户已登录-->
-        <li class="layui-nav-item nav-user-online">
+        <li class="layui-nav-item nav-user-online layui-hide-xs">
             <a href="javascript:;"><img src="static/images/photo.jpg" class="layui-nav-img">admin</a>
             <dl class="layui-nav-child">
                 <dd><a href="">个人中心</a></dd>
@@ -137,6 +137,23 @@
                     <i class="layui-icon layui-icon-auz"></i>
                     <cite>文章内容</cite>
                 </a>
+            </li>
+            <li data-name="component" class="layui-nav-item">
+                <a href="javascript:">
+                    <i class="layui-icon layui-icon-component"></i>
+                    <cite>admin</cite>
+                    <span class="layui-nav-more"></span></a>
+                <dl class="layui-nav-child">
+                    <dd data-name="button">
+                        <a href="#">个人中心</a>
+                    </dd>
+                    <dd data-name="nav">
+                        <a href="#">退出登录</a>
+                    </dd>
+                    <dd data-name="button">
+                        <a href="#">个人中心</a>
+                    </dd>
+                </dl>
             </li>
         </ul>
     </div>
