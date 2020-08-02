@@ -44,7 +44,7 @@
         <li class="layui-nav-item layui-hide-xs"><a href="list.html">文章列表</a></li>
         <li class="layui-nav-item layui-hide-xs"><a href="show.html">文章内容</a></li>
         <!--用户已登录-->
-        <li class="layui-nav-item nav-user-online">
+        <li class="layui-nav-item nav-user-online layui-hide-xs">
             <a href="javascript:;"><img src="static/images/photo.jpg" class="layui-nav-img">admin</a>
             <dl class="layui-nav-child">
                 <dd><a href="">个人中心</a></dd>
@@ -138,6 +138,23 @@
                     <cite>文章内容</cite>
                 </a>
             </li>
+            <li data-name="component" class="layui-nav-item">
+                <a href="javascript:">
+                    <i class="layui-icon layui-icon-component"></i>
+                    <cite>admin</cite>
+                    <span class="layui-nav-more"></span></a>
+                <dl class="layui-nav-child">
+                    <dd data-name="button">
+                        <a href="#">个人中心</a>
+                    </dd>
+                    <dd data-name="nav">
+                        <a href="#">退出登录</a>
+                    </dd>
+                    <dd data-name="button">
+                        <a href="#">个人中心</a>
+                    </dd>
+                </dl>
+            </li>
         </ul>
     </div>
 </div>
@@ -152,331 +169,144 @@
             <div class="layui-row layui-col-space30 main-centre">
                 <!--            主体左侧部分-->
                 <div class="layui-col-md9 main-left">
-                    <!--                    位置信息-->
-                    <blockquote class="layui-elem-quote location suspend">
-                        <p>您的位置： <a href="#">首页</a> » <span>Python</span></p>
-                    </blockquote>
-                    <!--            文章列表-->
-                    <div class="index-new">
-                        <h4>
-                            <strong>
-                                <i class="fas fa-newspaper"></i>
-                                <span>文章列表</span>
-                            </strong>
-                        </h4>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
+                    <div class="index-new message-board">
+                        <div class="message-editor">
+                            <div class="message-title clearfix">
+                                <div><h1>我要留言</h1></div>
+                                <div><em>80条留言</em></div>
+                            </div>
+                            <hr class="layui-bg-gray">
+                            <div class="layui-row message-body">
+                                <div class="layui-hide-xs layui-col-md1">
+                                    <a href="#">
+                                        <img src="static/images/photo.jpg" class="layui-nav-img">
                                     </a>
                                 </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-2">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
+                                <div class="layui-col-xs12 layui-col-md10">
+                                    <textarea id="leave"></textarea>
+                                </div>
+                                <div class="layui-col-xs2 layui-col-md1">
+                                    <button type="button" class="layui-btn layui-btn-normal">留言</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章2标题">
-                                        <img src="media/picture/2.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第二篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第二篇最新文章的摘要信息，锄禾日当午，汗滴禾下土。这是第二篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
+                        <div class="message-list">
+                            <div class="list-title clearfix">
                                 <div>
-                                    <span class="label-tag label-color-4">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
+                                    <h1>全部留言</h1>
+                                    <span>/</span>
+                                    <span><a href="#">我的留言</a></span>
                                 </div>
+                                <div>
+                                    <span>最新</span>
+                                    <span>/</span>
+                                    <span><a href="#">最热</a></span></div>
+                            </div>
+                            <hr class="layui-bg-gray">
+                            <ol class="list-body">
+                                <li class="message-content">
+                                    <a href="#">
+                                        <img src="static/images/nologin.png" class="layui-nav-img">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="box-info">
+                                            <a href="#">张三</a>
+                                            <span class="timeago" datetime="2020-06-30 09:20:00"></span>
+                                        </div>
+                                        <div class="box-body">
+                                            <p>好好学习天天向上，好好学习天天向上</p>
+                                        </div>
+                                        <div class="box-action">
+                                            <a href="#"><i class="fas fa-thumbs-up"></i>赞<em>10</em></a>
+                                            <a href="#"><i class="fas fa-comment-alt"></i>回复</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                            <ol class="list-body">
+                                <li class="message-content">
+                                    <a href="#">
+                                        <img src="static/images/nologin.png" class="layui-nav-img">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="box-info">
+                                            <a href="#">尼古拉斯凯奇</a>
+                                            <span class="timeago" datetime="2020-06-30 09:20:00"></span>
+                                        </div>
+                                        <div class="box-body">
+                                            <p>滚管厂家爱上大法官哈十多个</p>
+                                        </div>
+                                        <div class="box-action">
+                                            <a href="#"><i class="fas fa-thumbs-up"></i>赞<em>10</em></a>
+                                            <a href="#"><i class="fas fa-comment-alt"></i>回复</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                            <ol class="list-body">
+                                <li class="message-content">
+                                    <a href="#">
+                                        <img src="static/images/nologin.png" class="layui-nav-img">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="box-info">
+                                            <a href="#">李四</a>
+                                            <span class="timeago" datetime="2020-06-30 09:20:00"></span>
+                                        </div>
+                                        <div class="box-body">
+                                            <p>好好学习天天向上，好好学习天天向上,好好学习天天向上，好好学习天天向上,好好学习天天向上，好好学习天天向上,好好学习天天向上，好好学习天天向上,好好学习天天向上，好好学习天天向上,好好学习天天向上，好好学习天天向上</p>
+                                        </div>
+                                        <div class="box-action">
+                                            <a href="#"><i class="fas fa-thumbs-up"></i>赞<em>10</em></a>
+                                            <a href="#"><i class="fas fa-comment-alt"></i>回复</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="reply-1 message-content">
+                                    <a href="#">
+                                        <img src="static/images/nologin.png" class="layui-nav-img">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="box-info">
+                                            <a href="#">王五</a>
+                                            <em>回复</em>
+                                            <a href="#">赵四</a>
+                                            <span class="timeago" datetime="2020-06-30 09:20:00"></span>
+                                        </div>
+                                        <div class="box-body">
+                                            <p>你说的对</p>
+                                        </div>
+                                        <div class="box-action">
+                                            <a href="#"><i class="fas fa-thumbs-up"></i>赞<em>10</em></a>
+                                            <a href="#"><i class="fas fa-comment-alt"></i>回复</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply-2 message-content">
+                                    <a href="#">
+                                        <img src="static/images/nologin.png" class="layui-nav-img">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="box-info">
+                                            <a href="#">我的名字随便起</a>
+                                            <em>回复</em>
+                                            <a href="#">王五</a>
+                                            <span class="timeago" datetime="2020-06-30 09:20:00"></span>
+                                        </div>
+                                        <div class="box-body">
+                                            <p>我也觉得你说的对</p>
+                                        </div>
+                                        <div class="box-action">
+                                            <a href="#"><i class="fas fa-thumbs-up"></i>赞<em>10</em></a>
+                                            <a href="#"><i class="fas fa-comment-alt"></i>回复</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ol>
+
                             </div>
                         </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章33标题">
-                                        <img src="media/picture/3.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第三篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第三篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐这是第三篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐这是第三篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-3">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-2">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-1">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-6">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-5">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-4">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-2">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space20 article-box">
-                            <div class="layui-col-xs12 layui-col-md4">
-                                <div class="img-cover">
-                                    <a href="#" title="文章1标题">
-                                        <img src="media/picture/1.jpg" width="100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs12 layui-col-md8">
-                                <h3>
-                                    <a href="#">这是第一篇最新的文章标题</a>
-                                </h3>
-                                <p class="txt-cont hidden-xs">
-                                    <a href="#">这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。这是第一篇最新文章的摘要信息，锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦。</a>
-                                </p>
-                                <div>
-                                    <span class="label-tag label-color-3">
-                                        <a>Linux</a>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-clock"> 2020年7月16日</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-book-reader"> 32</i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half-alt"> 4.8</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="paging"></div>
                     </div>
-                </div>
                 <!--            主体右侧部分-->
                 <div class="layui-col-md3 main-right">
                     <!--        热门文章-->
@@ -663,8 +493,11 @@
         <!--        · <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277640022&amp;web_id=1277640022"></script><script src="https://c.cnzz.com/core.php?web_id=1277640022&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1277640022" target="_blank" title="站长统计">站长统计</a>-->
     </div>
 </footer>
+<!--回到顶部按钮-->
+<div id="back-top"><a href="#"><i class="layui-icon layui-icon-top"></i></a></div>
 <script src="static/layui/layui.js" charset="utf-8"></script>
 <script src="static/jquery-3.5.1/jquery-3.5.1.min.js" charset="utf-8"></script>
+<script src="static/js/timeago.js" charset="utf-8"></script>
 <script>
     layui.use('element', function () {
         var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
@@ -718,74 +551,44 @@
     })
 </script>
 <script>
-    <!--轮播图片-->
-    layui.use(['carousel', 'form'], function () {
-        var carousel = layui.carousel
-            , form = layui.form;
-        //图片轮播
-        carousel.render({
-            elem: '#test10'
-            , width: '100%'
-            // ,height: '100%'
-            , interval: 5000
-        });
-        //事件
-        carousel.on('change(test4)', function (res) {
-            console.log(res)
-        });
-        var $ = layui.$, active = {
-            set: function (othis) {
-                var THIS = 'layui-bg-normal'
-                    , key = othis.data('key')
-                    , options = {};
-                othis.css('background-color', '#5FB878').siblings().removeAttr('style');
-                options[key] = othis.data('value');
-                ins3.reload(options);
-            }
-        };
-        //监听开关
-        form.on('switch(autoplay)', function () {
-            ins3.reload({
-                autoplay: this.checked
-            });
-        });
-        $('.demoSet').on('keyup', function () {
-            var value = this.value
-                , options = {};
-            if (!/^\d+$/.test(value)) return;
+    // 富文本编辑器
+    layui.use('layedit', function(){
+        var layedit = layui.layedit;
+        layedit.set({
+            uploadImage: {  //上传图片的设置
+                url: '' //接口url
+                ,type: 'post' //默认post
 
-            options[this.name] = value;
-            ins3.reload(options);
+            }
+        });
+        layedit.build('leave', {
+            height: 150 //设置编辑器高度
         });
     });
 </script>
+<script >
+    // 日期显示为几天前
+    layui.config({
+        version: true,
+        base:  'assets/module/'
+    }).extend({
+        timeago: 'timeago'
+    }).use(['timeago'], function () {
+        var $ = layui.jquery;
+        var timeago = layui.timeago;
+        timeago.render($('.timeago'));
+    });
+</script>
 <script>
-    // 分页
-    layui.use(['laypage', 'layer'], function(){
-        var laypage = layui.laypage
-            ,layer = layui.layer;
-        laypage.render({
-            elem: 'paging'
-            ,count: 1000
-            ,layout: ['prev', 'page', 'next','limit',]
-        });
-        //调用分页
-        laypage.render({
-            elem: 'demo20'
-            ,count: data.length
-            ,jump: function(obj){
-                //模拟渲染
-                document.getElementById('biuuu_city_list').innerHTML = function(){
-                    var arr = []
-                        ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    layui.each(thisData, function(index, item){
-                        arr.push('<li>'+ item +'</li>');
-                    });
-                    return arr.join('');
-                }();
-            }
-        });
-
+    /*判断当在第一屏的时候，回到顶部按钮的时候隐藏*/
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 200){ //垂直滚动条offset
+            console.log("不是第一屏")
+            $('#back-top').addClass('back-top suspend');
+        }else{
+            $('.back-top').removeClass('back-top suspend');
+            console.log("是第一屏")
+        }
     });
 </script>
 </body>
