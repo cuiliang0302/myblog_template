@@ -1,8 +1,5 @@
 /* Please â¤ this if you like it! */
 
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
 body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -73,8 +70,9 @@ h6 span{
   border-radius: 50%;
   color: #ffeba7;
   background-color: #102770;
-  font-family: 'layui-icon !important';
-  content: "\e619";
+  font-family: layui-icon !important;
+  /*content: "\e619";*/
+  content: "\e603";
   z-index: 20;
   top: -10px;
   left: -10px;
@@ -84,7 +82,7 @@ h6 span{
   transition: all 0.5s ease;
 }
 .checkbox:checked + label:before {
-  transform: translateX(44px) rotate(-270deg);
+  transform: translateX(44px) rotate(-180deg);
 }
 
 

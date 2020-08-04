@@ -80,8 +80,9 @@ nav .layui-nav {
 /*导航右侧图标*/
 .nav-user-online {
     float: right;
+    z-index: 3;
+    margin-right: 0;
 }
-
 .nav-rignt {
     float: right;
     position: absolute;
@@ -183,7 +184,7 @@ nav {
     transition: all 1s;
 }
 
-.nav-search:before {
+.nav-search::before {
     content: "\e615";
 }
 
@@ -191,7 +192,7 @@ nav {
     transition: all 1s;
 }
 
-.nav-search-close:before {
+.nav-search-close::before {
     content: "\1006";
 }
 
@@ -728,7 +729,7 @@ h4 {
     font-size: 16px;
     margin-bottom: 1em;
 }
-.message-board .message-content .text-box:before {
+.message-board .message-content .text-box::before {
     content: '';
     display: inline-block;
     border-top: 9px solid transparent;
@@ -804,12 +805,12 @@ h4 {
         z-index: 1000;
     }
 
-    .nav-show-btn:before {
+    .nav-show-btn::before {
         content: "\e66b";
         color: #c4c5c9;
     }
 
-    .nav-close-btn:before {
+    .nav-close-btn::before {
         content: "\e668";
         color: #c4c5c9;
     }
@@ -854,12 +855,6 @@ h4 {
     .search-box .search-form input {
         width: 60%;
     }
-
-    .nav-user-online {
-        z-index: 3;
-        margin-right: 0;
-    }
-
 
     .nav-rignt {
         width: 100px;

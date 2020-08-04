@@ -12,7 +12,7 @@
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
-				<div class="col-12 text-center align-self-center py-5">
+				<div class="col-6 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
 						<h6 class="mb-0 pb-3"><span>登录</span><span>注册</span></h6>
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
@@ -24,15 +24,22 @@
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">登录</h4>
 											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="邮箱" id="logemail" autocomplete="off">
+												<input type="email" name="logemail" class="form-style" placeholder="邮箱" autocomplete="off">
 												<i class="input-icon layui-icon layui-icon-email"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="密码" id="logpass" autocomplete="off">
+												<input type="password" name="logpass" class="form-style" placeholder="密码" autocomplete="off">
 												<i class="input-icon layui-icon layui-icon-password"></i>
 											</div>
+											<div class="form-group mt-2 verification">
+												<input type="password" name="logpass" class="form-style" placeholder="验证码" autocomplete="off">
+												<i class="input-icon layui-icon layui-icon-vercode"></i>
+												<a href="#" title="点击刷新验证码"><img src="../static/images/yanzheng.png" alt=""></a>
+											</div>
+											<div>
 											<a href="#" class="btn mt-4">提交</a>
                             				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">忘记密码?</a></p>
+											</div>
 				      					</div>
 			      					</div>
 			      				</div>
@@ -41,15 +48,15 @@
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">注册</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="名称" id="logname" autocomplete="off">
+												<input type="text" name="logname" class="form-style" placeholder="名称" autocomplete="off">
 												<i class="input-icon layui-icon layui-icon-username"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="邮箱" id="logemail" autocomplete="off">
+												<input type="email" name="logemail" class="form-style" placeholder="邮箱" autocomplete="off">
 												<i class="input-icon layui-icon layui-icon-email"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="密码" id="logpass" autocomplete="off">
+												<input type="password" name="logpass" class="form-style" placeholder="密码" autocomplete="off">
 												<i class="input-icon layui-icon layui-icon-password"></i>
 											</div>
 											<a href="#" class="btn mt-4">提交</a>
