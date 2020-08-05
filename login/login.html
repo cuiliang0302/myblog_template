@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 <title>用户登录/注册</title>
 <link rel='stylesheet' href='bootstrap.min.css'>
 <!---图标库--->
@@ -9,10 +10,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
-				<div class="col-6 text-center align-self-center py-5">
+				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
 						<h6 class="mb-0 pb-3"><span>登录</span><span>注册</span></h6>
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
@@ -58,6 +60,11 @@
 											<div class="form-group mt-2">
 												<input type="password" name="logpass" class="form-style" placeholder="密码" autocomplete="off">
 												<i class="input-icon layui-icon layui-icon-password"></i>
+											</div>
+											<div class="form-group mt-2 verification">
+												<input type="password" name="logpass" class="form-style" placeholder="验证码" autocomplete="off">
+												<i class="input-icon layui-icon layui-icon-vercode"></i>
+												<a href="#" title="点击刷新验证码"><img src="../static/images/yanzheng.png" alt=""></a>
 											</div>
 											<a href="#" class="btn mt-4">提交</a>
 				      					</div>

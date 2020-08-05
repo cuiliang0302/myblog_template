@@ -10,7 +10,7 @@ body{
 	overflow-x: hidden;
 }
 a {
-	cursor: pointer;
+  cursor: pointer;
   transition: all 200ms linear;
 }
 a:hover {
@@ -148,6 +148,11 @@ h6 span{
   display: block;
     margin: 0;
     padding: 0;
+}
+.form-group a {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 .form-style {
   padding: 13px 20px;
