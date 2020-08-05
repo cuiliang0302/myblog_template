@@ -54,20 +54,23 @@ div img:hover {
 }
 
 /*导航栏logo*/
-.nav-logo {
-    font-size: 50px;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
+.logo {
     position: absolute;
     left: 45px;
+    height: 60px;
+    width: 150px;
 }
-
-.nav-logo img {
-    width: 130px;
+.logo a {
+    display: block;
+    background: url("../../images/logo.png") no-repeat;
+    margin-top:12px;
+    height: 60px;
+    width: 100%;
+    font-size: 0;
 }
+.logo a {
 
+}
 /*手机版展开导航栏按钮*/
 .nav-show-btn {
     display: none;
