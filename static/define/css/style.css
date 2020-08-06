@@ -361,6 +361,10 @@ h4 {
     font-weight: normal;
     padding: 3px 3px 3px 3px;
     border-radius: 5px;
+    transition: all 0.8s;
+}
+.label-tag a:hover {
+    transform: scale(1.1);
 }
 
 /*各个不同颜色标签*/
@@ -574,9 +578,9 @@ h4 {
     font-size: 20px;
 }
 
-.main-centre i:hover, .main-centre .article-reward:hover {
-    color: white;
-}
+/*.main-centre i:hover, .main-centre .article-reward:hover {*/
+/*    color: white;*/
+/*}*/
 
 .main-centre .article-action .article-like {
     position: absolute;
@@ -588,7 +592,7 @@ h4 {
 
 .main-centre .article-action .article-reward {
     position: absolute;
-    background-color: red;
+    background-color: #e74c3c;
     width: 70px;
     height: 70px;
     line-height: 70px;
@@ -599,8 +603,11 @@ h4 {
     z-index: 1;
     margin-left: -35px;
     margin-top: -15px;
+    transition: all 0.5s;
 }
-
+.main-centre .article-action .article-reward:hover {
+    transform: scale(1.1);
+}
 .main-centre .article-action .article-share {
     position: absolute;
     right: 0;
@@ -782,6 +789,16 @@ h4 {
 .message-board .list-body .reply-4 {
     margin-left: 12em;
 }
+/*个人中心首页*/
+.layui-layout-body .layui-layout .layui-body {
+    background-color: #fff;
+}
+.layui-layout-admin .layui-side {
+    display: block;
+}
+.manage-body {
+    padding: 15px;
+}
 /*移动设备*/
 @media screen and (max-width: 768px) {
     /*导航栏样式适配*/
@@ -888,5 +905,13 @@ h4 {
     /*留言板发表留言*/
     .message-board .message-body div:nth-child(2) {
         padding: 0 0 10px 0;
+    }
+    /*个人中心首页*/
+    .layui-layout-body .layui-layout-admin .layui-nav-item img {
+        display: none;
+    }
+    .layui-layout-body .layui-layout-admin .layui-body {
+        left: 0;
+        bottom: 0;
     }
 }
