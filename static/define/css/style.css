@@ -793,11 +793,20 @@ h4 {
 .layui-layout-body .layui-layout .layui-body {
     background-color: #fff;
 }
+.layui-layout-body .layui-footer {
+    text-align: center;
+}
+.layui-layout-body .layui-footer a {
+    color: #7f8c8d;
+}
 .layui-layout-admin .layui-side {
     display: block;
 }
 .manage-body {
     padding: 15px;
+}
+.manage-body fieldset legend {
+    text-align: center;
 }
 /*移动设备*/
 @media screen and (max-width: 768px) {
