@@ -926,4 +926,8 @@ h4 {
         left: 0;
         bottom: 0;
     }
+    /*个人中心修改密码信息页*/
+    .layui-layout-body .layui-body .manage-body,.layui-layout-body .layui-body .layui-card-body {
+        padding-left: 0;
+    }
 }
