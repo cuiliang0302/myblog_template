@@ -796,8 +796,11 @@ h4 {
 .layui-layout-body .layui-footer {
     text-align: center;
 }
-.layui-layout-body .layui-footer a {
+.layui-footer span {
     color: #7f8c8d;
+}
+.layui-footer a:hover {
+    color: #e74c3c;
 }
 .layui-layout-admin .layui-side {
     display: block;
