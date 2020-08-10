@@ -511,7 +511,7 @@ h4 {
 /*目录*/
 .main-centre .catalogue aside {
     position: fixed;
-    left: 10px;
+    width: 9.5%;
 }
 
 .main-centre .article-title h1 {
