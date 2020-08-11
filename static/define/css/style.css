@@ -981,4 +981,14 @@ h4 {
     .layui-layout-body .layui-body .manage-body,.layui-layout-body .layui-body .layui-card-body {
         padding-left: 0;
     }
+    /*后台管理页首页*/
+    .layuiadmin-big-font {
+        padding-left: 10px;
+    }
+    .layui-card-body p {
+        padding-left: 10px;
+    }
+    .progress-bar-row {
+        padding-left: 10px;
+    }
 }
