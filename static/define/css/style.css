@@ -997,4 +997,8 @@ h4 {
     .progress-bar-row {
         padding-left: 10px;
     }
+    .layui-btn+.layui-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

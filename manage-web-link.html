@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>文章列表</title>
+    <title>友情链接</title>
     <link rel="stylesheet" href="static/layui/css/layui.css">
     <link rel="stylesheet" href="static/define/css/style.css">
 </head>
@@ -48,7 +48,7 @@
                     <a class="" href="javascript:;">文章管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="manage-article-add.html">新增文章</a></dd>
-                        <dd class="layui-this"><a href="manage-article-list.html">文章列表</a></dd>
+                        <dd><a href="manage-article-list.html">文章列表</a></dd>
                         <dd><a href="manage-article-category.html">文章分类</a></dd>
                         <dd><a href="manage-article-tag.html">文章标签</a></dd>
                     </dl>
@@ -59,7 +59,7 @@
                         <dd><a href="manage-web-comment.html">评论管理</a></dd>
                         <dd><a href="manage-web-leave.html">留言管理</a></dd>
                         <dd><a href="manage-web-shuffling.html">轮播图管理</a></dd>
-                        <dd><a href="manage-web-link.html">友情链接</a></dd>
+                        <dd class="layui-this"><a href="manage-web-link.html">友情链接</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href="manage-user.html">用户管理</a></li>
@@ -74,25 +74,26 @@
                 <div class="layui-form">
                     <table class="layui-table">
                         <colgroup>
-                            <col width="60">
-                            <col width="600">
-                            <col width="200">
-                            <col>
+                            <!--                            <col width="60">-->
+                            <!--                            <col width="600">-->
+                            <!--                            <col width="200">-->
+                            <!--                            <col>-->
                         </colgroup>
                         <thead>
                         <tr>
-                            <th>序号</th>
-                            <th>标题</th>
-                            <th>分类</th>
+                            <th>ID</th>
+                            <th>logo</th>
+                            <th>名称</th>
+                            <th>链接</th>
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
-
-                        <tr id="67">
+                        <tr>
                             <td>1</td>
-                            <td><a href="/show-67.html" title="ansiable安装部署" rel="bookmark">ansiable安装部署</a></td>
-                            <td>Linux</td>
+                            <td><img src="static/images/photo.jpg" class="layui-nav-img"></td>
+                            <td>百度网</td>
+                            <td><a href="www.baidu.com">www.baidu.com</a></td>
                             <td>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
@@ -100,11 +101,11 @@
                                         class="layui-icon layui-icon-delete"></i>删除</a>
                             </td>
                         </tr>
-
-                        <tr id="62">
-                            <td>2</td>
-                            <td><a href="/show-62.html" title="Django Admin管理工具" rel="bookmark">Django Admin管理工具</a></td>
-                            <td>Django</td>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="static/images/photo.jpg" class="layui-nav-img"></td>
+                            <td>百度网</td>
+                            <td><a href="www.baidu.com">www.baidu.com</a></td>
                             <td>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
@@ -112,11 +113,11 @@
                                         class="layui-icon layui-icon-delete"></i>删除</a>
                             </td>
                         </tr>
-
-                        <tr id="60">
-                            <td>3</td>
-                            <td><a href="/show-60.html" title="使用数据库" rel="bookmark">使用数据库</a></td>
-                            <td>Django</td>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="static/images/photo.jpg" class="layui-nav-img"></td>
+                            <td>百度网</td>
+                            <td><a href="www.baidu.com">www.baidu.com</a></td>
                             <td>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
@@ -124,11 +125,11 @@
                                         class="layui-icon layui-icon-delete"></i>删除</a>
                             </td>
                         </tr>
-
-                        <tr id="59">
-                            <td>4</td>
-                            <td><a href="/show-59.html" title="接收用户发送的数据" rel="bookmark">接收用户发送的数据</a></td>
-                            <td>Django</td>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="static/images/photo.jpg" class="layui-nav-img"></td>
+                            <td>百度网</td>
+                            <td><a href="www.baidu.com">www.baidu.com</a></td>
                             <td>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
@@ -136,11 +137,11 @@
                                         class="layui-icon layui-icon-delete"></i>删除</a>
                             </td>
                         </tr>
-
-                        <tr id="58">
-                            <td>5</td>
-                            <td><a href="/show-58.html" title="使用静态文件" rel="bookmark">使用静态文件</a></td>
-                            <td>Django</td>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="static/images/photo.jpg" class="layui-nav-img"></td>
+                            <td>百度网</td>
+                            <td><a href="www.baidu.com">www.baidu.com</a></td>
                             <td>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
@@ -148,35 +149,11 @@
                                         class="layui-icon layui-icon-delete"></i>删除</a>
                             </td>
                         </tr>
-
-                        <tr id="57">
-                            <td>6</td>
-                            <td><a href="/show-57.html" title="第一个django程序" rel="bookmark">第一个django程序</a></td>
-                            <td>Django</td>
-                            <td>
-                                <a class="layui-btn layui-btn-normal layui-btn-xs"><i
-                                        class="layui-icon layui-icon-edit"></i>编辑</a>
-                                <a class="layui-btn layui-btn-danger layui-btn-xs"><i
-                                        class="layui-icon layui-icon-delete"></i>删除</a>
-                            </td>
-                        </tr>
-
-                        <tr id="28">
-                            <td>7</td>
-                            <td><a href="/show-28.html" title="mysql简介" rel="bookmark">mysql简介</a></td>
-                            <td>Mysql</td>
-                            <td>
-                                <a class="layui-btn layui-btn-normal layui-btn-xs"><i
-                                        class="layui-icon layui-icon-edit"></i>编辑</a>
-                                <a class="layui-btn layui-btn-danger layui-btn-xs"><i
-                                        class="layui-icon layui-icon-delete"></i>删除</a>
-                            </td>
-                        </tr>
-
-                        <tr id="1">
-                            <td>8</td>
-                            <td><a href="/show-1.html" title="Django简介" rel="bookmark">Django简介</a></td>
-                            <td>Django</td>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="static/images/photo.jpg" class="layui-nav-img"></td>
+                            <td>百度网</td>
+                            <td><a href="www.baidu.com">www.baidu.com</a></td>
                             <td>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
