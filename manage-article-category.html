@@ -15,14 +15,14 @@
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="index.html">首页</a></li>
-<!--            <li class="layui-nav-item">-->
-<!--                <a href="javascript:;">其它系统</a>-->
-<!--                <dl class="layui-nav-child">-->
-<!--                    <dd><a href="">邮件管理</a></dd>-->
-<!--                    <dd><a href="">消息管理</a></dd>-->
-<!--                    <dd><a href="">授权管理</a></dd>-->
-<!--                </dl>-->
-<!--            </li>-->
+            <!--            <li class="layui-nav-item">-->
+            <!--                <a href="javascript:;">其它系统</a>-->
+            <!--                <dl class="layui-nav-child">-->
+            <!--                    <dd><a href="">邮件管理</a></dd>-->
+            <!--                    <dd><a href="">消息管理</a></dd>-->
+            <!--                    <dd><a href="">授权管理</a></dd>-->
+            <!--                </dl>-->
+            <!--            </li>-->
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
@@ -35,7 +35,7 @@
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-<!--            <li class="layui-nav-item"><a href="">退了</a></li>-->
+            <!--            <li class="layui-nav-item"><a href="">退了</a></li>-->
         </ul>
     </div>
 
@@ -69,8 +69,69 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div class="layui-fluid">
+        <div class="manage-body">
+            <div class="cintent-card">
+                <div class="layui-form">
+                    <div class="layui-card-header layuiadmin-card-header-auto">
+                        <button class="layui-btn layuiadmin-btn-tags" data-type="add">添加</button>
+                    </div>
+                    <div class="layui-card-body">
+                        <table class="layui-table" style="text-align: center">
+                            <colgroup>
+                                <col width="60">
+                                <col width="600">
+                                <col width="200">
+                                <col>
+                            </colgroup>
+                            <thead style="text-align: center">
+                            <tr style="text-align:center">
+                                <th style="text-align:center">序号</th>
+                                <th style="text-align:center">分类</th>
+                                <th style="text-align:center">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
+                            <tr id="67">
+                                <td>1</td>
+                                <td>Linux</td>
+                                <td>
+                                    <a name="edit" href="/management/article-post/?id=67"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                    <a nane="delete" href="javascript:" onclick="del_article(this, 67)"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                </td>
+                            </tr>
+
+                            <tr id="62">
+                                <td>2</td>
+                                <td>Django</td>
+                                <td>
+                                    <a name="edit" href="/management/article-post/?id=62"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                    <a nane="delete" href="javascript:" onclick="del_article(this, 62)"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                </td>
+                            </tr>
+
+                            <tr id="60">
+                                <td>3</td>
+                                <td>Django</td>
+                                <td>
+                                    <a name="edit" href="/management/article-post/?id=60"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                    <a nane="delete" href="javascript:" onclick="del_article(this, 60)"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                </td>
+                            </tr>
+
+                            <tr id="59">
+                                <td>4</td>
+                                <td>Django</td>
+                                <td>
+                                    <a name="edit" href="/management/article-post/?id=59"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                    <a nane="delete" href="javascript:" onclick="del_article(this, 59)"><button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -92,7 +153,7 @@
 <script src="static/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <script>
     //JavaScript代码区域
-    layui.use('element', function(){
+    layui.use('element', function () {
         var element = layui.element;
 
     });
