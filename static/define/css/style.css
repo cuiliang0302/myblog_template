@@ -14,7 +14,13 @@ em {
     position: fixed;
     width: 100%;
 }
-
+/*表格居中*/
+.layui-table thead tr th {
+    text-align: center;
+}
+.layui-table tbody td {
+    text-align: center;
+}
 /*图片放大效果*/
 img {
     transition: all 2s;
