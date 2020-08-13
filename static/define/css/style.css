@@ -68,16 +68,16 @@ div img:hover {
 /*导航栏logo*/
 .logo {
     position: absolute;
-    left: 45px;
+    left: 40px;
     height: 60px;
     width: 150px;
+    transition: 0.8s all;
 }
 .logo a {
     display: block;
     background: url("../../images/logo.png") no-repeat;
-    margin-top:12px;
     height: 60px;
-    width: 100%;
+    width: 200px;
     font-size: 0;
 }
 .logo a {
@@ -89,7 +89,7 @@ div img:hover {
 }
 
 nav .layui-nav {
-    padding-left: 200px;
+    padding-left: 250px;
 }
 
 /*导航右侧图标*/
@@ -928,6 +928,7 @@ h4 {
         top: 10px;
         transition: 0.8s left;
         z-index: 1000;
+        left: 0;
     }
 
     .nav-show-btn::before {
@@ -963,15 +964,21 @@ h4 {
     /*主页内容侧滑效果*/
     .page-main {
         transition: 0.8s all;
+        position: relative;
+        left: 0;
     }
 
     .page-main-side {
         /*padding-left: 200px;*/
         width: 100%;
         transition: 0.8s all;
-        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        left: 200px;
     }
-
+    .logo-side {
+        left: 0;
+        transition: 0.8s all;
+    }
     /*搜索栏滑动下拉效果*/
     .search-box .search-form {
         padding: 10px 10%;
@@ -988,6 +995,7 @@ h4 {
     /*主页移动端适配*/
     .page-main {
         padding-top: 40px;
+
     }
 
     .page-main .main-left {
