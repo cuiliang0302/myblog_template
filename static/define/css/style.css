@@ -230,7 +230,9 @@ nav {
 
 /*轮播图片*/
 .carousel-img img {
+    height: 400px;
     width: 100%;
+    object-fit: cover;
 }
 
 /*首页各个栏目标题*/
@@ -993,19 +995,19 @@ h4 {
     }
 
     /*主页移动端适配*/
+    .carousel-img img {
+        height: 200px;
+    }
     .page-main {
         padding-top: 40px;
 
     }
 
-    .page-main .main-left {
-        padding-top: 0;
-    }
 
     .page-main .main-left .index-new {
         padding: 10px 20px;
         margin-bottom: 0;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     .page-main .main-right {
