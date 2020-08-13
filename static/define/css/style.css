@@ -1041,7 +1041,7 @@ h4 {
     .recommended-card {
         height: 125px;
     }
-    .footer-fixed {
+    footer .footer-fixed {
         position: revert;
         width: auto;
     }
