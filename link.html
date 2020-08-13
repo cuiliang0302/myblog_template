@@ -520,5 +520,14 @@
         }
     });
 </script>
+<script>
+    // 电脑版添加底部固定
+    $(document).ready(function(){
+        var body_height = $(document.body).height();//浏览器当前窗口文档body的高度
+        if (body_height < 800) {
+            $(".footer ").addClass("footer-fixed")
+        }
+    })
+</script>
 </body>
 </html>
