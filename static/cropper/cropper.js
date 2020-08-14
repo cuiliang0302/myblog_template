@@ -7,10 +7,10 @@ layui.define(['jquery'], function (exports) {
     $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
     var DEFAULTS = {
-        // Define the view mode of the easyCropper
+        // Define the view mode of the cropper
         viewMode: 0, // 0, 1, 2, 3
 
-        // Define the dragging mode of the easyCropper
+        // Define the dragging mode of the cropper
         dragMode: 'crop', // 'crop', 'move' or 'none'
 
         // Define the aspect ratio of the crop box
@@ -22,7 +22,7 @@ layui.define(['jquery'], function (exports) {
         // A selector for adding extra containers to preview
         preview: '',
 
-        // Re-render the easyCropper when resize the window
+        // Re-render the cropper when resize the window
         responsive: true,
 
         // Restore the cropped area after resize the window
@@ -82,7 +82,7 @@ layui.define(['jquery'], function (exports) {
         // Enable to resize the crop box
         cropBoxResizable: true,
 
-        // Toggle drag mode between "crop" and "move" when click twice on the easyCropper
+        // Toggle drag mode between "crop" and "move" when click twice on the cropper
         toggleDragModeOnDblclick: true,
 
         // Size limitation
@@ -102,7 +102,7 @@ layui.define(['jquery'], function (exports) {
         zoom: null
     };
 
-    var TEMPLATE = '<div class="easyCropper-container">' + '<div class="easyCropper-wrap-box">' + '<div class="easyCropper-canvas"></div>' + '</div>' + '<div class="easyCropper-drag-box"></div>' + '<div class="easyCropper-crop-box">' + '<span class="easyCropper-view-box"></span>' + '<span class="easyCropper-dashed dashed-h"></span>' + '<span class="easyCropper-dashed dashed-v"></span>' + '<span class="easyCropper-center"></span>' + '<span class="easyCropper-face"></span>' + '<span class="easyCropper-line line-e" data-action="e"></span>' + '<span class="easyCropper-line line-n" data-action="n"></span>' + '<span class="easyCropper-line line-w" data-action="w"></span>' + '<span class="easyCropper-line line-s" data-action="s"></span>' + '<span class="easyCropper-point point-e" data-action="e"></span>' + '<span class="easyCropper-point point-n" data-action="n"></span>' + '<span class="easyCropper-point point-w" data-action="w"></span>' + '<span class="easyCropper-point point-s" data-action="s"></span>' + '<span class="easyCropper-point point-ne" data-action="ne"></span>' + '<span class="easyCropper-point point-nw" data-action="nw"></span>' + '<span class="easyCropper-point point-sw" data-action="sw"></span>' + '<span class="easyCropper-point point-se" data-action="se"></span>' + '</div>' + '</div>';
+    var TEMPLATE = '<div class="cropper-container">' + '<div class="cropper-wrap-box">' + '<div class="cropper-canvas"></div>' + '</div>' + '<div class="cropper-drag-box"></div>' + '<div class="cropper-crop-box">' + '<span class="cropper-view-box"></span>' + '<span class="cropper-dashed dashed-h"></span>' + '<span class="cropper-dashed dashed-v"></span>' + '<span class="cropper-center"></span>' + '<span class="cropper-face"></span>' + '<span class="cropper-line line-e" data-action="e"></span>' + '<span class="cropper-line line-n" data-action="n"></span>' + '<span class="cropper-line line-w" data-action="w"></span>' + '<span class="cropper-line line-s" data-action="s"></span>' + '<span class="cropper-point point-e" data-action="e"></span>' + '<span class="cropper-point point-n" data-action="n"></span>' + '<span class="cropper-point point-w" data-action="w"></span>' + '<span class="cropper-point point-s" data-action="s"></span>' + '<span class="cropper-point point-ne" data-action="ne"></span>' + '<span class="cropper-point point-nw" data-action="nw"></span>' + '<span class="cropper-point point-sw" data-action="sw"></span>' + '<span class="cropper-point point-se" data-action="se"></span>' + '</div>' + '</div>';
 
     var REGEXP_DATA_URL_HEAD = /^data:.*,/;
     var REGEXP_USERAGENT = /(Macintosh|iPhone|iPod|iPad).*AppleWebKit/i;
@@ -451,7 +451,7 @@ layui.define(['jquery'], function (exports) {
             var $this = self.$element;
             var $container = self.$container;
             var $cropper = self.$cropper;
-            var hidden = 'easyCropper-hidden';
+            var hidden = 'cropper-hidden';
 
             $cropper.addClass(hidden);
             $this.removeClass(hidden);
@@ -1178,7 +1178,7 @@ layui.define(['jquery'], function (exports) {
                 return;
             }
 
-            self.setDragMode(self.$dragBox.hasClass('easyCropper-crop') ? 'move' : 'crop');
+            self.setDragMode(self.$dragBox.hasClass('cropper-crop') ? 'move' : 'crop');
         },
         wheel: function wheel(event) {
             var self = this;
@@ -1260,7 +1260,7 @@ layui.define(['jquery'], function (exports) {
 
             if (action === 'crop') {
                 self.cropping = true;
-                self.$dragBox.addClass('easyCropper-modal');
+                self.$dragBox.addClass('cropper-modal');
             }
         },
         cropMove: function cropMove(e) {
@@ -1324,7 +1324,7 @@ layui.define(['jquery'], function (exports) {
 
             if (self.cropping) {
                 self.cropping = false;
-                self.$dragBox.toggleClass('easyCropper-modal', self.cropped && self.options.modal);
+                self.$dragBox.toggleClass('cropper-modal', self.cropped && self.options.modal);
             }
 
             self.trigger('cropend', {
@@ -1740,7 +1740,7 @@ layui.define(['jquery'], function (exports) {
 
                     // Show the crop box if is hidden
                     if (!self.cropped) {
-                        self.$cropBox.removeClass('easyCropper-hidden');
+                        self.$cropBox.removeClass('cropper-hidden');
                         self.cropped = true;
 
                         if (self.limited) {
@@ -1809,10 +1809,10 @@ layui.define(['jquery'], function (exports) {
                 self.limitCropBox(true, true);
 
                 if (self.options.modal) {
-                    self.$dragBox.addClass('easyCropper-modal');
+                    self.$dragBox.addClass('cropper-modal');
                 }
 
-                self.$cropBox.removeClass('easyCropper-hidden');
+                self.$cropBox.removeClass('cropper-hidden');
             }
 
             self.setCropBoxData(self.initialCropBox);
@@ -1862,13 +1862,13 @@ layui.define(['jquery'], function (exports) {
             // Render canvas after crop box rendered
             self.renderCanvas();
 
-            self.$dragBox.removeClass('easyCropper-modal');
-            self.$cropBox.addClass('easyCropper-hidden');
+            self.$dragBox.removeClass('cropper-modal');
+            self.$cropBox.addClass('cropper-hidden');
         },
 
 
         /**
-         * Replace the image's src and rebuild the easyCropper
+         * Replace the image's src and rebuild the cropper
          *
          * @param {String} url
          * @param {Boolean} onlyColorChanged (optional)
@@ -1901,29 +1901,29 @@ layui.define(['jquery'], function (exports) {
         },
 
 
-        // Enable (unfreeze) the easyCropper
+        // Enable (unfreeze) the cropper
         enable: function enable() {
             var self = this;
 
             if (self.ready) {
                 self.disabled = false;
-                self.$cropper.removeClass('easyCropper-disabled');
+                self.$cropper.removeClass('cropper-disabled');
             }
         },
 
 
-        // Disable (freeze) the easyCropper
+        // Disable (freeze) the cropper
         disable: function disable() {
             var self = this;
 
             if (self.ready) {
                 self.disabled = true;
-                self.$cropper.addClass('easyCropper-disabled');
+                self.$cropper.addClass('cropper-disabled');
             }
         },
 
 
-        // Destroy the easyCropper and remove the instance from the image
+        // Destroy the cropper and remove the instance from the image
         destroy: function destroy() {
             var self = this;
             var $this = self.$element;
@@ -1934,7 +1934,7 @@ layui.define(['jquery'], function (exports) {
                 }
 
                 self.unbuild();
-                $this.removeClass('easyCropper-hidden');
+                $this.removeClass('cropper-hidden');
             } else if (self.isImg) {
                 $this.off('load', self.start);
             } else if (self.$clone) {
@@ -2613,11 +2613,11 @@ layui.define(['jquery'], function (exports) {
                 movable = options.movable && mode === 'move';
                 mode = croppable || movable ? mode : 'none';
 
-                self.$dragBox.data('action', mode).toggleClass('easyCropper-crop', croppable).toggleClass('easyCropper-move', movable);
+                self.$dragBox.data('action', mode).toggleClass('cropper-crop', croppable).toggleClass('cropper-move', movable);
 
                 if (!options.cropBoxMovable) {
                     // Sync drag mode to crop box when it is not movable(#300)
-                    self.$face.data('action', mode).toggleClass('easyCropper-crop', croppable).toggleClass('easyCropper-move', movable);
+                    self.$face.data('action', mode).toggleClass('cropper-crop', croppable).toggleClass('cropper-move', movable);
                 }
             }
         }
@@ -2627,7 +2627,7 @@ layui.define(['jquery'], function (exports) {
 
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    var CLASS_HIDDEN = 'easyCropper-hidden';
+    var CLASS_HIDDEN = 'cropper-hidden';
     var REGEXP_DATA_URL = /^data:/;
     var REGEXP_DATA_URL_JPEG = /^data:image\/jpeg;base64,/;
 
@@ -2855,7 +2855,7 @@ layui.define(['jquery'], function (exports) {
                         $this.one('load', $.proxy(self.start, this));
                     }
                 } else {
-                    $clone.one('load', $.proxy(self.start, this)).one('error', $.proxy(self.stop, this)).addClass('easyCropper-hide').insertAfter($this);
+                    $clone.one('load', $.proxy(self.start, this)).one('error', $.proxy(self.stop, this)).addClass('cropper-hide').insertAfter($this);
                 }
             }
         }, {
@@ -2907,16 +2907,16 @@ layui.define(['jquery'], function (exports) {
                 }
 
                 var $cropper = $(TEMPLATE);
-                var $cropBox = $cropper.find('.easyCropper-crop-box');
-                var $face = $cropBox.find('.easyCropper-face');
+                var $cropBox = $cropper.find('.cropper-crop-box');
+                var $face = $cropBox.find('.cropper-face');
 
-                // Create easyCropper elements
+                // Create cropper elements
                 self.$container = $this.parent();
                 self.$cropper = $cropper;
-                self.$canvas = $cropper.find('.easyCropper-canvas').append($clone);
-                self.$dragBox = $cropper.find('.easyCropper-drag-box');
+                self.$canvas = $cropper.find('.cropper-canvas').append($clone);
+                self.$dragBox = $cropper.find('.cropper-drag-box');
                 self.$cropBox = $cropBox;
-                self.$viewBox = $cropper.find('.easyCropper-view-box');
+                self.$viewBox = $cropper.find('.cropper-view-box');
                 self.$face = $face;
 
                 // Hide the original image
@@ -2924,7 +2924,7 @@ layui.define(['jquery'], function (exports) {
 
                 // Show the clone image if is hidden
                 if (!self.isImg) {
-                    $clone.removeClass('easyCropper-hide');
+                    $clone.removeClass('cropper-hide');
                 }
 
                 self.initPreview();
@@ -2937,34 +2937,34 @@ layui.define(['jquery'], function (exports) {
 
                 if (options.autoCrop) {
                     if (options.modal) {
-                        self.$dragBox.addClass('easyCropper-modal');
+                        self.$dragBox.addClass('cropper-modal');
                     }
                 } else {
                     $cropBox.addClass(CLASS_HIDDEN);
                 }
 
                 if (!options.guides) {
-                    $cropBox.find('.easyCropper-dashed').addClass(CLASS_HIDDEN);
+                    $cropBox.find('.cropper-dashed').addClass(CLASS_HIDDEN);
                 }
 
                 if (!options.center) {
-                    $cropBox.find('.easyCropper-center').addClass(CLASS_HIDDEN);
+                    $cropBox.find('.cropper-center').addClass(CLASS_HIDDEN);
                 }
 
                 if (options.cropBoxMovable) {
-                    $face.addClass('easyCropper-move').data('action', 'all');
+                    $face.addClass('cropper-move').data('action', 'all');
                 }
 
                 if (!options.highlight) {
-                    $face.addClass('easyCropper-invisible');
+                    $face.addClass('cropper-invisible');
                 }
 
                 if (options.background) {
-                    $cropper.addClass('easyCropper-bg');
+                    $cropper.addClass('cropper-bg');
                 }
 
                 if (!options.cropBoxResizable) {
-                    $cropBox.find('.easyCropper-line, .easyCropper-point').addClass(CLASS_HIDDEN);
+                    $cropBox.find('.cropper-line, .cropper-point').addClass(CLASS_HIDDEN);
                 }
 
                 self.setDragMode(options.dragMode);
@@ -2972,7 +2972,7 @@ layui.define(['jquery'], function (exports) {
                 self.ready = true;
                 self.setData(options.data);
 
-                // Trigger the ready event asynchronously to keep `data('easyCropper')` is defined
+                // Trigger the ready event asynchronously to keep `data('cropper')` is defined
                 self.completing = setTimeout(function () {
                     if ($.isFunction(options.ready)) {
                         $this.one('ready', options.ready);

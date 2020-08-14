@@ -28,11 +28,11 @@ em {
     text-align: center;
 }
 /*图片放大效果*/
-img {
+.img-zoom img {
     transition: all 2s;
 }
 
-div img:hover {
+.img-zoom img:hover {
     transform: scale(1.05);
 }
 /*清除浮动*/
@@ -1139,6 +1139,9 @@ h4 {
     #input-textarea {
         display: inline;
     }
+    .layui-form-item button {
+        margin-top: 10px;
+    }
     /*友情链接*/
     .recommended-card {
         height: 125px;
@@ -1147,5 +1150,8 @@ h4 {
         position: revert;
         width: auto;
     }
-
+    /*图片裁剪*/
+    #layui-layer1 {
+        width: 100%;
+    }
 }
