@@ -1,4 +1,3 @@
-/* Please â¤ this if you like it! */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +49,7 @@ p {
     line-height: 1.7;
 }
 
-.card-front h4 {
+.center-wrap h4 {
     font-weight: 600;
     font-size: 30px;
     color: #2980b9;
@@ -407,5 +406,3 @@ form .btn {
         padding-bottom: 0!important;
     }
 }
-
-

@@ -21,7 +21,7 @@ body {
 .figure {
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 60%;
     -webkit-transform: translate(-50%, -65%);
     transform: translate(-50%, -65%);
 }
@@ -314,7 +314,6 @@ body {
 .tips {
     width: 100%;
     height: 200px;
-    margin: 100px auto 0 auto;
     text-align: center;
 }
 .tips h2 {
