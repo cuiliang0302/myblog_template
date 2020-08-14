@@ -861,6 +861,9 @@ h4 {
     margin-left: 15px;
 }
 /*后台管理*/
+.layui-body .page-main-management {
+    padding-top: 0;
+}
 .layui-layout-body .layui-body .layui-fluid {
     padding: 15px;
 }
@@ -1050,6 +1053,9 @@ h4 {
         position: relative;
         left: 0;
     }
+    .layui-body .page-main-management {
+        padding-top: 0;
+    }
 
     .page-main-side {
         /*padding-left: 200px;*/
@@ -1109,6 +1115,7 @@ h4 {
     .layui-layout-body .layui-layout-admin .layui-body {
         left: 0;
         bottom: 0;
+        z-index: 10;
     }
     /*个人中心修改密码信息页*/
     .layui-layout-body .layui-body .manage-body,.layui-layout-body .layui-body .layui-card-body {
