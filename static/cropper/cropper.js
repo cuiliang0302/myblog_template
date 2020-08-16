@@ -2666,7 +2666,7 @@ layui.define(['jquery'], function (exports) {
                 if ($this.is('img')) {
                     self.isImg = true;
 
-                    // Should use `$.fn.attr` here. e.g.: "img/picture.jpg"
+                    // Should use `$.fn.attr` here. e.g.: "img/cover.jpg"
                     url = $this.attr('src');
                     self.originalUrl = url;
 

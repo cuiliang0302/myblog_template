@@ -302,7 +302,7 @@ CodeMirror.defineMode("perl",function(){
                 fileno                          :1,     // - return file descriptor from filehandle
                 flock                           :1,     // - lock an entire file with an advisory lock
                 fork                            :1,     // - create a new process just like this one
-                format                          :1,     // - declare a picture format with use by the write() function
+                format                          :1,     // - declare a cover format with use by the write() function
                 formline                        :1,     // - internal function used for formats
                 getc                            :1,     // - get the next character from the filehandle
                 getgrent                        :1,     // - get next group record
@@ -474,7 +474,7 @@ CodeMirror.defineMode("perl",function(){
                 wantarray                       :1,     // - get void vs scalar vs list context of current subroutine call
                 warn                            :1,     // - print debugging info
                 when                            :1,     //
-                write                           :1,     // - print a picture record
+                write                           :1,     // - print a cover record
                 y                               :null}; // - transliterate a string
 
         var RXstyle="string-2";

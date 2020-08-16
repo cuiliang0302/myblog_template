@@ -2667,7 +2667,7 @@ camera:
       - image
       - lens
       - photo
-      - picture
+      - cover
       - record
       - shutter
       - video
@@ -2686,7 +2686,7 @@ camera-retro:
       - image
       - lens
       - photo
-      - picture
+      - cover
       - record
       - shutter
       - video
@@ -10224,7 +10224,7 @@ image:
       - album
       - landscape
       - photo
-      - picture
+      - cover
   styles:
     - solid
     - regular
@@ -10241,7 +10241,7 @@ images:
       - album
       - landscape
       - photo
-      - picture
+      - cover
   styles:
     - solid
     - regular
@@ -14132,7 +14132,7 @@ portrait:
       - id
       - image
       - photo
-      - picture
+      - cover
       - selfie
   styles:
     - solid
